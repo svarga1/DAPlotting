@@ -1,0 +1,2925 @@
+
+
+* . * . * . * . * . * . * . * . * . * . * . * . * . * . * . * . * . * . * . * . 
+     PROGRAM GSI_ANL HAS BEGUN. COMPILED 1999232.55     ORG: NP23
+     STARTING DATE-TIME  FEB 20,2022  19:34:24.553   51  SUN   2459631
+
+
+ gsi_metguess_mod*init_:  2D-MET STATE VARIABLES: 
+ ps
+ z
+ gsi_metguess_mod*init_:  3D-MET STATE VARIABLES:
+ u
+ v
+ div
+ vor
+ tv
+ q
+ oz
+ cw
+ ql
+ qi
+ gsi_metguess_mod*init_: ALL MET STATE VARIABLES:
+ u
+ v
+ div
+ vor
+ tv
+ q
+ oz
+ cw
+ ql
+ qi
+ ps
+ z
+ gsi_chemguess_mod*init_:  2D-CHEM STATE VARIABLES: 
+ gsi_chemguess_mod*init_:  3D-CHEM STATE VARIABLES:
+ co2
+ gsi_chemguess_mod*init_: ALL CHEM STATE VARIABLES:
+ co2
+ state_vectors*init_anasv:  2D-STATE VARIABLES ps                              
+ sst                             
+ state_vectors*init_anasv:  3D-STATE VARIABLES u                               
+ v                               tv                              
+ tsen                            q                               
+ oz                              ql                              
+ qi                              prse                            
+ state_vectors*init_anasv: ALL STATE VARIABLES u                               
+ v                               tv                              
+ tsen                            q                               
+ oz                              ql                              
+ qi                              prse                            
+ ps                              sst                             
+ control_vectors*init_anacv: 2D-CONTROL VARIABLES ARE 
+ ps                              sst                             
+ control_vectors*init_anacv: 3D-CONTROL VARIABLES ARE 
+ sf                              vp                              
+ t                               q                               
+ oz                              cw                              
+ control_vectors*init_anacv: MOTLEY CONTROL VARIABLES 
+ stl                             sti                             
+ control_vectors*init_anacv: ALL CONTROL VARIABLES    
+ sf                              vp                              
+ ps                              t                               
+ q                               oz                              
+ sst                             cw                              
+ stl                             sti                             
+ anacv cvars3d is sf                              
+ anacv cvars3d is vp                              
+ anacv cvars3d is t                               
+ anacv cvars3d is q                               
+ anacv cvars3d is oz                              
+ anacv cvars3d is cw                              
+ radiance_mode_init: icloud_fwd= T  iallsky= T  cw_cv= T  ql_cv= F  iaerosol_fwd
+ = F  iaerosol= F  iprecip= F
+ radiance_mode_init: n_actual_clouds=           3
+ radiance_mode_init: cloud_names=cw                  ql                  
+ qi                  
+ radiance_mode_init: n_clouds_fwd=           2
+ radiance_mode_init: cloud_names_fwd=ql                  qi                  
+ radiance_mode_init: n_clouds_jac=           2
+ radiance_mode_init: cloud_names_jac=ql                  qi                  
+ radiance_mode_init: n_actual_aerosols=           0
+ radiance_mode_init: n_aerosols_fwd=           0
+ radiance_mode_init: n_aerosols_jac=           0
+ INIT_IO:  reserve units lendian_in=          15  and lendian_out=          66 
+  for little endian i/o
+ NST_INIT_NML_: Initializing default NST namelist variables
+  at 0 in gsimod, use_gfs_stratosphere,nems_nmmb_regional =  F F
+  jcap_cut increased to jcap+1 =          767
+  jcap_cut < jcap+1 not allowed 
+ GSI_4DVAR:  nobs_bins =            1
+ SETUP_4DVAR: nobs_bins =    1, ntlevs_ens =    1
+ SETUP_4DVAR: allocate array containing time levels for ensemble
+ SETUP_4DVAR: timelevel =     1 , ens_fhrlevs =     6
+ SETUP_4DVAR: l4dvar= F
+ SETUP_4DVAR: l4densvar= F
+ SETUP_4DVAR: winlen=   6.00000000000000     
+ SETUP_4DVAR: winoff=   3.00000000000000     
+ SETUP_4DVAR: hr_obsbin=   6.00000000000000     
+ SETUP_4DVAR: nobs_bins=           1
+ SETUP_4DVAR: ntlevs_ens=           1
+ SETUP_4DVAR: nsubwin,nhr_subwin=           1           6
+ SETUP_4DVAR: lsqrtb= F
+ SETUP_4DVAR: lbicg= F
+ SETUP_4DVAR: lcongrad= F
+ SETUP_4DVAR: lbfgsmin= F
+ SETUP_4DVAR: ltlint= F
+ SETUP_4DVAR: ladtest,ladtest_obs,lgrtest= F F F
+ SETUP_4DVAR: iwrtinc=          -1
+ SETUP_4DVAR: lanczosave= F
+ SETUP_4DVAR: ltcost= F
+ SETUP_4DVAR: jsiga=          -1
+ SETUP_4DVAR: nwrvecs=          -1
+ SETUP_4DVAR: iorthomax=           0
+ SETUP_4DVAR: liauon= F
+ SETUP_4DVAR: ljc4tlevs= F
+ SETUP_4DVAR: ibin_anl=           1
+ SETUP_4DVAR: tau_fcst=          -1
+ in gsimod: use_gfs_stratosphere,nems_nmmb_regional,wrf_nmm_regional=  F F F
+ GSIMOD:  ***WARNING*** set l_hydrometeor_bkio=false
+ INIT_OBSMOD_VARS: ndat_times,ndat_types,ndat=           1           4
+           4
+ INIT_OBSMOD_VARS: nhr_assimilation=           6
+ GSIMOD:  reset nstrong=           0  because TLNMC option is set to off= 
+           0
+ calling gsisub with following input parameters:
+
+
+ &SETUP
+ GENCODE =  0.000000000000000E+000,
+ FACTQMIN        =  0.000000000000000E+000,
+ FACTQMAX        =  0.000000000000000E+000,
+ SUPERFACT       =   1.00000000000000     ,
+ LIMITQOBS       = F,
+ CLIP_SUPERSATURATION    = F,
+ FACTQL  =  0.000000000000000E+000,
+ FACTQI  =  0.000000000000000E+000,
+ FACTQR  =  0.000000000000000E+000,
+ FACTQS  =  0.000000000000000E+000,
+ FACTQG  =  0.000000000000000E+000,
+ FACTV   =  0.000000000000000E+000,
+ FACTL   =  0.000000000000000E+000,
+ FACTP   =  0.000000000000000E+000,
+ FACTG   =  0.000000000000000E+000,
+ FACTW10M        =  0.000000000000000E+000,
+ FACTHOWV        =  0.000000000000000E+000,
+ FACTCLDCH       =  0.000000000000000E+000,
+ R_OPTION        = F,
+ DELTIM  =   94.0000000000000     ,
+ DTPHYS  =   3600.00000000000     ,
+ BIASCOR =  0.980000000000000     ,  0.100000000000000     ,
+ BCOPTION        =           0,
+ DIURNALBC       =  0.000000000000000E+000,
+ NEUTRAL_STABILITY_WINDFACT_2DVAR        = F,
+ USE_SIMILARITY_2DVAR    = F,
+ NITER   =           0, 2*10, 48*0,
+ NITER_NO_QC     =     1000000, 2*10, 48*1000000,
+ MITER   =           2,
+ QOPTION =           2,
+ CWOPTION        =           3,
+ NHR_ASSIMILATION        =           6,
+ MIN_OFFSET      =         180,
+ PSEUDO_Q2       = F,
+ IOUT_ITER       =         220,
+ NPREDP  =           6,
+ RETRIEVAL       = F,
+ TZR_QC  =           1,
+ TZR_BUFRSAVE    = F,
+ DIAG_RAD        = T,
+ DIAG_PCP        = T,
+ DIAG_CONV       = T,
+ DIAG_OZONE      = T,
+ DIAG_AERO       = T,
+ DIAG_CO = F,
+ DIAG_LIGHT      = T,
+ DIAG_RADARDBZ   = F,
+ IGUESS  =          -1,
+ WRITE_DIAG      = F, T, F, T, 47*F,
+ REDUCE_DIAG     = F,
+ ONEOBTEST       = F,
+ SFCMODEL        = F,
+ DTBDUV_ON       = T,
+ IFACT10 =           0,
+ L_FOTO  = F,
+ OFFTIME_DATA    = F,
+ USE_PBL = F,
+ USE_COMPRESS    = T,
+ NSIG_EXT        =          12,
+ GPSTOP  =   50.0000000000000     ,
+ COMMGPSTOP      =   30.0000000000000     ,
+ COMMGPSERRINF   =   1.00000000000000     ,
+ PERTURB_OBS     = F,
+ PERTURB_FACT    =   1.00000000000000     ,
+ OBERROR_TUNE    = F,
+ PRESERVE_RESTART_DATE   = F,
+ CRTM_COEFFS_PATH        = ./crtm_coeffs/                                                                                            
+                                                                                                                                     
+                   ,
+ BERROR_STATS    = berror_stats                                                                                                      
+                                                                                                                                     
+           ,
+ TCP_POSMATCH    =           0,
+ TCP_BOX =           5,
+ NEWPC4PRED      = T,
+ ADP_ANGLEBC     = T,
+ ANGORD  =           4,
+ PASSIVE_BC      = T,
+ USE_EDGES       = F,
+ EMISS_BC        = T,
+ UPD_PRED        = 20*1.00000000000000        ,
+ RESET_BAD_RADBC = F,
+ SSMIS_METHOD    =           1,
+ SSMIS_PRECOND   =  1.000000000000000E-002,
+ GMI_METHOD      =           0,
+ AMSR2_METHOD    =           0,
+ BIAS_ZERO_START = T,
+ EC_AMV_QC       = T,
+ LOBSDIAGSAVE    = F,
+ LOBSDIAG_FORENKF        = F,
+ L4DVAR  = F,
+ LBICG   = F,
+ LSQRTB  = F,
+ LCONGRAD        = F,
+ LBFGSMIN        = F,
+ LTLINT  = F,
+ NHR_OBSBIN      =           6,
+ NHR_SUBWIN      =           6,
+ MPES_OBSERVER   =           0,
+ ALWAYSLOCAL     = F,
+ USE_FV3_AERO    = F,
+ NWRVECS =          -1,
+ IORTHOMAX       =           0,
+ LADTEST = F,
+ LADTEST_OBS     = F,
+ LGRTEST = F,
+ LOBSKEEP        = F,
+ LSENSRECOMPUTE  = F,
+ JSIGA   =          -1,
+ LTCOST  = F,
+ LOBSENSFC       = F,
+ LOBSENSJB       = F,
+ LOBSENSINCR     = F,
+ LOBSENSADJ      = F,
+ LOBSENSMIN      = F,
+ IOBSCONV        =           0,
+ IDMODEL = T,
+ IWRTINC =          -1,
+ LWRITE4DANL     = F,
+ NHR_ANAL        = 21*0,
+ JITERSTART      =           1,
+ JITEREND        =           1,
+ LOBSERVER       = F,
+ LANCZOSAVE      = F,
+ LLANCDONE       = F,
+ LFERRSCALE      = F,
+ PRINT_DIAG_PCG  = F,
+ TSENSIBLE       = F,
+ LREAD_OBS_SAVE  = F,
+ LREAD_OBS_SKIP  = F,
+ USE_GFS_OZONE   = F,
+ CHECK_GFS_OZONE_DATE    = F,
+ REGIONAL_OZONE  = F,
+ LWRITE_PREDTERMS        = F,
+ LWRITE_PEAKWT   = F,
+ USE_GFS_NEMSIO  = F,
+ USE_GFS_NCIO    = T,
+ SFCNST_COMB     = T,
+ LIAUON  = F,
+ USE_PREPB_SATWND        = F,
+ L4DENSVAR       = F,
+ ENS_NSTARTHR    =           6,
+ USE_GFS_STRATOSPHERE    = F,
+ PBLEND0 =   152.000000000000     ,
+ PBLEND1 =   79.0000000000000     ,
+ STEP_START      =  1.000000000000000E-003,
+ DIAG_PRECON     = T,
+ LRUN_SUBDIRS    = T,
+ USE_SP_EQSPACE  = F,
+ LNESTED_LOOPS   = F,
+ LSINGLERADOB    = F,
+ THIN4D  = F,
+ USE_READIN_ANL_SFCMASK  = F,
+ LUSE_OBSDIAG    = F,
+ ID_DRIFTER      = F,
+ ID_SHIP = F,
+ VERBOSE = F,
+ PRINT_OBS_PARA  = F,
+ LSINGLERADAR    = F,
+ SINGLERADAR     = KOUN,
+ LNOBALANCE      = F,
+ MISSING_TO_NOPCP        = F,
+ MINOBRANGEDBZ   =   10000.0000000000     ,
+ MINOBRANGEDBZ   =   10000.0000000000     ,
+ MAXOBRANGEDBZ   =   200000.000000000     ,
+ MAXOBRANGEVR    =   200000.000000000     ,
+ MAXTILTVR       =   20.0000000000000     ,
+ WHICHRADAR      = KKKK,
+ DORADARONEOB    = F,
+ ONEOBLAT        =  -999.000000000000     ,
+ ONEOBLON        =  -999.000000000000     ,
+ ONEOBHEIGHT     =  -999.000000000000     ,
+ ONEOBVALUE      =  -999.000000000000     ,
+ ONEOBDDIFF      =  -999.000000000000     ,
+ ONEOBRADID      = KKKK,
+ RMESH_VR        =   2.00000000000000     ,
+ ZMESH_DBZ       =   500.000000000000     ,
+ ZMESH_VR        =   500.000000000000     ,
+ NTILT_RADARFILES        =           1,
+ WHICHRADAR      = KKKK,
+ RADAR_NO_THINNING       = F,
+ ENS_HX_DBZ_CUT  = F,
+ STATIC_GSI_NOPCP_DBZ    =  0.000000000000000E+000,
+ RMESH_DBZ       =   2.00000000000000     ,
+ MINOBRANGEVR    =   10000.0000000000     ,
+ MAXTILTDBZ      =   20.0000000000000     ,
+ MINTILTVR       =  0.000000000000000E+000,
+ MINTILTDBZ      =  0.000000000000000E+000,
+ IF_VTERMINAL    = F,
+ IF_VROBS_RAW    = F,
+ IF_MODEL_DBZ    = T,
+ IMP_PHYSICS     =          11,
+ LUPP    = T,
+ NETCDF_DIAG     = T,
+ BINARY_DIAG     = F,
+ L_WCP_CWM       = F,
+ AIRCRAFT_RECON  = F,
+ DIAG_VERSION    =       40000,
+ WRITE_FV3_INCR  = T,
+ INCVARS_TO_ZERO = NONE        NONE        NONE        NONE        NONE        NONE        NONE        NONE        NONE        NONE  
+       ,
+ INCVARS_ZERO_STRAT      = NONE        NONE        NONE        NONE        NONE        NONE        NONE        NONE        NONE      
+   NONE        ,
+ INCVARS_EFOLD   =   5.00000000000000     ,
+ DIAG_VERSION    =       40000,
+ CAO_CHECK       = F,
+ LCALC_GFDL_CFRAC        = F,
+ TAU_FCST        =          -1,
+ EFSOI_ORDER     =           1,
+ LUPDQC  = T,
+ LQCOEF  = T,
+ CNVW_OPTION     = F,
+ L2RWTHIN        = F,
+ HURRICANE_RADAR = F,
+ L_REG_UPDATE_HYDRO_DELZ = F,
+ L_USE_DBZ_DIRECTDA      = F,
+ L_USE_RW_COLUMNTILT     = F
+ /
+ &GRIDOPTS
+ JCAP    =         766,
+ JCAP_B  =        1534,
+ NSIG    =         127,
+ NLAT    =         770,
+ NLON    =        1536,
+ NLAT_REGIONAL   =           0,
+ NLON_REGIONAL   =           0,
+ DIAGNOSTIC_REG  = F,
+ UPDATE_REGSFC   = F,
+ NETCDF  = F,
+ REGIONAL        = F,
+ WRF_NMM_REGIONAL        = F,
+ NEMS_NMMB_REGIONAL      = F,
+ FV3_REGIONAL    = F,
+ WRF_MASS_REGIONAL       = F,
+ TWODVAR_REGIONAL        = F,
+ FILLED_GRID     = F,
+ HALF_GRID       = F,
+ NVEGE_TYPE      =          20,
+ NLAYERS = 200*1,
+ CMAQ_REGIONAL   = F,
+ NMMB_REFERENCE_GRID     = H,
+ GRID_RATIO_NMMB =   1.41421356237310     ,
+ GRID_RATIO_FV3_REGIONAL =   1.00000000000000     ,
+ GRID_RATIO_WRFMASS      =   1.00000000000000     ,
+ JCAP_GFS        =        1534,
+ JCAP_CUT        =         767,
+ WRF_MASS_HYBRIDCORD     = F,
+ GRID_TYPE_FV3_REGIONAL  =           0,
+ FV3_IO_LAYOUT_Y =           1
+ /
+ &BKGERR
+ VS      =  0.700000000000000     ,
+ NHSCRF  =           3,
+ HZSCL   =   1.70000000000000     ,  0.800000000000000     ,  0.500000000000000     ,
+ HSWGT   =  0.450000000000000     ,  0.300000000000000     ,  0.250000000000000     ,
+ NORH    =           2,
+ NDEG    =           4,
+ NOQ     =           3,
+ BW      =  0.000000000000000E+000,
+ NORSP   =           4,
+ FSTAT   = F,
+ PERT_BERR       = F,
+ PERT_BERR_FCT   =  0.000000000000000E+000,
+ BKGV_FLOWDEP    = T,
+ BKGV_REWGTFCT   =   1.50000000000000     ,
+ BKGV_WRITE      = F,
+ FPSPROJ = T,
+ ADJUSTOZVAR     = F,
+ FUT2PS  = F,
+ CWCOVEQQCOV     = F,
+ USENEWGFSBERROR = F
+ /
+ &ANBKGERR
+ ANISOTROPIC     = F,
+ ANCOVMDL        =           0,
+ TRIAD4  = T,
+ IFILT_ORD       =           4,
+ NPASS   =           1,
+ NORMAL  =        -200,
+ BINOM   = T,
+ NGAUSS  =           3,
+ RGAUSS  =  0.500000000000000     ,   1.00000000000000     ,   2.00000000000000     , 17*0.000000000000000E+000  ,
+ ANHSWGT = 20*1.00000000000000        ,
+ AN_VS   =   1.00000000000000     ,
+ GRID_RATIO      =   2.00000000000000     ,
+ GRID_RATIO_P    =  0.000000000000000E+000,
+ NORD_F2A        =           4,
+ AN_FLEN_U       =  -1.00000000000000     ,
+ AN_FLEN_T       =  -1.00000000000000     ,
+ AN_FLEN_Z       =  -1.00000000000000     ,
+ RTMA_SUBDOMAIN_OPTION   = F,
+ RTMA_BKERR_SUB2SLAB     = F,
+ LREADNORM       = F,
+ NSMOOTH =           0,
+ NSMOOTH_SHAPIRO =           0,
+ AFACT0  = 10*0.000000000000000E+000  ,
+ COVMAP  = F
+ /
+ &JCOPTS
+ LJCDFI  = F,
+ ALPHAJC =  0.000000000000000E+000,
+ SWITCH_ON_DERIVATIVES   = F,
+ TENDSFLAG       = F,
+ LJCPDRY = F,
+ BAMP_JCPDRY     =   50000000.0000000     ,
+ EPS_EER =  -1.00000000000000     ,
+ LJC4TLEVS       = F,
+ LJCLIMQC        = F
+ /
+ &STRONGOPTS
+ REG_TLNMC_TYPE  =           1,
+ TLNMC_OPTION    =           0,
+ NSTRONG =           0,
+ PERIOD_MAX      =   6.00000000000000     ,
+ PERIOD_WIDTH    =   1.50000000000000     ,
+ NVMODES_KEEP    =           8,
+ BALDIAG_FULL    = F,
+ BALDIAG_INC     = F
+ /
+ &OBSQC
+ DFACT   =  0.750000000000000     ,
+ DFACT1  =   3.00000000000000     ,
+ ERRADAR_INFLATE =   1.00000000000000     ,
+ TDRERR_INFLATE  = F,
+ OBERRFLG        = F,
+ VADFILE = none      ,
+ NOIQC   = T,
+ C_VARQC =  2.000000000000000E-002,
+ BLACKLST        = F,
+ USE_POQ7        = F,
+ HILBERT_CURVE   = F,
+ TCP_REFPS       =   1000.00000000000     ,
+ TCP_WIDTH       =   70.0000000000000     ,
+ TCP_ERMIN       =  0.750000000000000     ,
+ TCP_ERMAX       =   7.35000000000000     ,
+ QC_NOIRJACO3    = F,
+ QC_NOIRJACO3_POLE       = T,
+ QC_SATWNDS      = T,
+ NJQC    = F,
+ VQC     = F,
+ NVQC    = F,
+ HUB_NORM        = T,
+ TROFLG  = F,
+ LAT_C   =   21.0000000000000     ,
+ NRAND   =          13,
+ AIRCRAFT_T_BC_POF       = F,
+ AIRCRAFT_T_BC   = F,
+ AIRCRAFT_T_BC_EXT       = F,
+ BIASPREDT       =   100000.000000000     ,
+ UPD_AIRCRAFT    = F,
+ CLEANUP_TAIL    = T,
+ HDIST_AIRCRAFT  =   60000.0000000000     ,
+ BUDDYCHECK_T    = F,
+ BUDDYDIAG_SAVE  = F,
+ VADWND_L2RW_QC  = T,
+ OMPSLP_MULT_FACT        =   2.00000000000000     ,
+ PVIS    =   1.00000000000000     ,
+ PCLDCH  =   1.00000000000000     ,
+ SCALE_CV        =   1.00000000000000     ,
+ ESTVISOE        =   1.00000000000000     ,
+ ESTCLDCHOE      =   1.00000000000000     ,
+ VIS_THRES       =   16000.0000000000     ,
+ CLDCH_THRES     =   16000.0000000000     ,
+ CLD_DET_DEC2BIN = F,
+ Q_DOE_A_136     =   1.00000000000000     ,
+ Q_DOE_A_137     =   1.00000000000000     ,
+ Q_DOE_B_136     =  0.000000000000000E+000,
+ Q_DOE_B_137     =  0.000000000000000E+000,
+ T_DOE_A_136     =   1.00000000000000     ,
+ T_DOE_A_137     =   1.00000000000000     ,
+ T_DOE_B_136     =  0.000000000000000E+000,
+ T_DOE_B_137     =  0.000000000000000E+000,
+ UV_DOE_A_236    =   1.00000000000000     ,
+ UV_DOE_A_237    =   1.00000000000000     ,
+ UV_DOE_A_213    =   1.00000000000000     ,
+ UV_DOE_B_236    =  0.000000000000000E+000,
+ UV_DOE_B_237    =  0.000000000000000E+000,
+ UV_DOE_B_213    =  0.000000000000000E+000,
+ VAD_NEAR_ANALTIME       = F
+ /
+ EXT_SONDE on type 120 = F
+ uprair               ps                    ps                         0.00   0   0       3.00
+ uprair               t                     t                          0.00   0   0       3.00
+ uprair               q                     q                          0.00   0   0       3.00
+ uprair               uv                    uv                         0.00   0   0       3.00
+ &SUPEROB_RADAR
+ DEL_AZIMUTH     =   5.00000000000000     ,
+ DEL_ELEV        =  0.250000000000000     ,
+ DEL_RANGE       =   5000.00000000000     ,
+ DEL_TIME        =  0.500000000000000     ,
+ ELEV_ANGLE_MAX  =   5.00000000000000     ,
+ MINNUM  =          50,
+ RANGE_MAX       =   100000.000000000     ,
+ L2SUPEROB_ONLY  = F,
+ RADAR_SITES     = F,
+ RADAR_BOX       = F,
+ RADAR_RMESH     =   10.0000000000000     ,
+ RADAR_ZMESH     =   500.000000000000     
+ /
+ &LAG_DATA
+ LAG_ACCUR       =  1.000000000000000E-006,
+ INFILE_LAG      = inistate_lag.dat                                                                                                  
+                                                                                                                                     
+          ,
+ LAG_STEPDURATION        =   900.000000000000     ,
+ LAG_NMAX_BAL    =        1000,
+ LAG_VORCORE_STDERR_A    =   2000.00000000000     ,
+ LAG_VORCORE_STDERR_B    =  0.000000000000000E+000
+ /
+ &HYBRID_ENSEMBLE
+ L_HYB_ENS       = F,
+ UV_HYB_ENS      = F,
+ Q_HYB_ENS       = F,
+ ANISO_A_EN      = F,
+ GENERATE_ENS    = F,
+ N_ENS   =           0,
+ NLON_ENS        =           0,
+ NLAT_ENS        =           0,
+ JCAP_ENS        =           0,
+ PSEUDO_HYBENS   = F,
+ MERGE_TWO_GRID_ENSPERTS = F,
+ REGIONAL_ENSEMBLE_OPTION        =           0,
+ FV3SAR_BG_OPT   =           0,
+ FV3SAR_ENSEMBLE_OPT     =           0,
+ FULL_ENSEMBLE   = F,
+ PWGTFLG = F,
+ JCAP_ENS_TEST   =           0,
+ BETA_S0 =  0.125000000000000     ,
+ BETA_E0 =  -1.00000000000000     ,
+ S_ENS_H =   800.000000000000     ,
+ S_ENS_V = -0.800000000000000     ,
+ READIN_LOCALIZATION     = T,
+ EQSPACE_ENSGRID = F,
+ READIN_BETA     = F,
+ GRID_RATIO_ENS  =   1.00000000000000     ,
+ OZ_UNIV_STATIC  = F,
+ WRITE_ENS_SPRD  = F,
+ USE_LOCALIZATION_GRID   = F,
+ USE_GFS_ENS     = T,
+ I_EN_PERTS_IO   =           0,
+ L_ENS_IN_DIFF_TIME      = F,
+ ENSEMBLE_PATH   = ./ensemble_data/                                                                                                  
+                                                                                                                                     
+                                                                                                                                     
+                                                                                                                                     
+   ,
+ ENS_FAST_READ   = T,
+ SST_STATICB     = T
+ /
+ &RAPIDREFRESH_CLDSURF
+ DFI_RADAR_LATENT_HEAT_TIME_PERIOD       =   30.0000000000000     ,
+ METAR_IMPACT_RADIUS     =   10.0000000000000     ,
+ METAR_IMPACT_RADIUS_LOWCLOUD    =   4.00000000000000     ,
+ L_GSD_TERRAIN_MATCH_SURFTOBS    = F,
+ L_SFCOBSERROR_RAMP_T    = F,
+ L_SFCOBSERROR_RAMP_Q    = F,
+ L_PBL_PSEUDO_SURFOBST   = F,
+ L_PBL_PSEUDO_SURFOBSQ   = F,
+ L_PBL_PSEUDO_SURFOBSUV  = F,
+ PBLH_RATION     =  0.750000000000000     ,
+ PPS_PRESS_INCR  =   30.0000000000000     ,
+ L_GSD_LIMIT_OCEAN_Q     = F,
+ L_PW_HGT_ADJUST = F,
+ L_LIMIT_PW_INNOV        = F,
+ MAX_INNOV_PCT   =  0.100000000000000     ,
+ L_CLEANSNOW_WARMTS      = F,
+ L_CONSERVE_THETAV       = F,
+ R_CLEANSNOW_WARMTS_THRESHOLD    =   8.00000000000000     ,
+ I_CONSERVE_THETAV_ITERNUM       =           3,
+ L_GSD_SOILTQ_NUDGE      = F,
+ L_CLD_BLD       = F,
+ CLD_BLD_HGT     =   1200.00000000000     ,
+ BUILD_CLOUD_FRAC_P      =  0.950000000000000     ,
+ CLEAR_CLOUD_FRAC_P      =  0.100000000000000     ,
+ NESDIS_NPTS_RAD =           1,
+ ICLEAN_HYDRO_WITHREF    =           1,
+ ICLEAN_HYDRO_WITHREF_ALLCOL     =           0,
+ I_USE_2MQ4B     =           0,
+ I_USE_2MT4B     =           0,
+ I_GSDCLDANAL_TYPE       =           0,
+ I_GSDSFC_USELIST        =           0,
+ I_LIGHTPCP      =           0,
+ I_SFCT_GROSS    =           0,
+ L_USE_HYDRORETRIEVAL_ALL        = F,
+ L_NUMCONC       = F,
+ L_CLOSEOBS      = F,
+ I_COASTLINE     =           0,
+ I_GSDQC =           0,
+ QV_MAX_INC      =  5.000000000000000E-003,
+ IOPTION =           2,
+ L_PRECIP_CLEAR_ONLY     = F,
+ L_FOG_OFF       = F,
+ CLD_BLD_COVERAGE        =  0.600000000000000     ,
+ CLD_CLR_COVERAGE        =  0.600000000000000     ,
+ I_CLOUD_Q_INNOVATION    =           0,
+ I_ENS_MEAN      =           0,
+ DTSTMAX =   20.0000000000000     
+ /
+ &CHEM
+ BERROR_CHEM     = F,
+ ONEOBTEST_CHEM  = F,
+ MAGINNOV_CHEM   =   30.0000000000000     ,
+ MAGOBERR_CHEM   =   2.00000000000000     ,
+ ONEOB_TYPE_CHEM = pm2_5                           ,
+ OBLAT_CHEM      =   45.0000000000000     ,
+ OBLON_CHEM      =   270.000000000000     ,
+ OBPRES_CHEM     =   1000.00000000000     ,
+ DIAG_INCR       = F,
+ ELEV_TOLERANCE  =   500.000000000000     ,
+ TUNABLE_ERROR   =  0.500000000000000     ,
+ IN_FNAME        = cmaq_input.bin                                                                                                    
+                                                                                                                                     
+           ,
+ OUT_FNAME       = cmaq_output.bin                                                                                                   
+ INIT_IO:  set IO server task to mype_io=          99
+                                                                                                                                     
+           ,
+ INCR_FNAME      = chem_increment.bin                                                                                                
+                                                                                                                                     
+           ,
+ LAEROANA_GOCART = F,
+ L_AODERR_TABLE  = F,
+ AOD_QA_LIMIT    =           3,
+ LUSE_DEEPBLUE   = F,
+ AERO_RATIOS     = F,
+ WRF_PM2_5       = F,
+ LREAD_EXT_AEROSOL       = F
+ /
+ &NST
+ NST_GSI =           3,
+ NSTINFO =           4,
+ ZSEA1   =           0,
+ ZSEA2   =           0,
+ FAC_DTL =           1,
+ FAC_TSL =           1
+ /
+ gridmod fv3_full_hydro  F
+ INIT_GRID_VARS:  allocate and load sp_a with jcap,imax,jmax=         766
+        1536         768
+ READ_FILES:  analysis date,minutes         2021           6           1
+           0           0    22834080
+ READ_FILES:  atm guess file sigf06   6.00000000000000               18
+           5          31        2021    22834080
+ READ_FILES:  sfc guess file sfcf06   6.00000000000000               18
+           5          31        2021    22834080
+ READ_FILES:  atm fcst files used in analysis  :             6
+   3.00000000000000                1
+ READ_FILES:  sfc fcst files used in analysis:             6
+   3.00000000000000                1
+ READ_FILES: hrdifnst = hrdifsfc
+ GESINFO:  Read NCEP FV3GFS netCDF format file, sigf06
+ GESINFO:  ***WARNING*** guess jcap inconsistent with namelist
+ GESINFO:  ***WARNING*** this is a FV3GFS NEMSIO/NetCDF file
+ GESINFO:  guess jcap_b, namelist jcap_b =        -9999        1534
+ GESINFO:  Guess    date is           18           5          31        2021
+           0   6.00000000000000     
+ GESINFO:  Analysis date is         2021           6           1           0
+           0  2021060100   3.00000000000000     
+ INIT_PREDX:  enter routine
+ CREATE_PCP_RANDOM:  iseed=  2021060100
+ correlated_obsmod*ini_: Correlated-Obs for the following instruments
+ iasi_metop-c sea    2   0.0000000000000000  1.0000000000000000 Rcov_iasicsea
+ No Rcov files found.  Turning off Correlated Error
+ iasi_metop-b sea    2   0.0000000000000000  1.0000000000000000 Rcov_iasibsea
+ No Rcov files found.  Turning off Correlated Error
+ iasi_metop-c land    2   0.0000000000000000  1.0000000000000000 Rcov_iasicland
+ No Rcov files found.  Turning off Correlated Error
+ iasi_metop-b land    2   0.0000000000000000  1.0000000000000000 Rcov_iasibland
+ No Rcov files found.  Turning off Correlated Error
+ cris-fsr_n20 sea    2   0.0000000000000000  1.0000000000000000 Rcov_crisn20
+ No Rcov files found.  Turning off Correlated Error
+ cris-fsr_npp sea    2   0.0000000000000000  1.0000000000000000 Rcov_crisnpp
+ No Rcov files found.  Turning off Correlated Error
+ WARNING: Error Covariance not set for iasi_metop-c:sea
+ WARNING: Error Covariance not set for iasi_metop-b:sea
+ WARNING: Error Covariance not set for cris-fsr_n20:sea
+ WARNING: Error Covariance not set for cris-fsr_npp:sea
+ WARNING: Error Covariance not set for iasi_metop-c:land
+ WARNING: Error Covariance not set for iasi_metop-b:land
+ radiance_obstype_init: total_rad_type=           0  types are: 
+ PCPINFO_READ:  no pcpbias file.  set predxp=0.0
+ line ignored in convinfo due to use flag  tcp             112           0
+          -3
+ line ignored in convinfo due to use flag  ps              120           0
+          -3
+ line ignored in convinfo due to use flag  ps              132           0
+          -3
+ line ignored in convinfo due to use flag  ps              180           0
+          -3
+ line ignored in convinfo due to use flag  ps              180           1
+          -3
+ line ignored in convinfo due to use flag  ps              181           0
+          -3
+ line ignored in convinfo due to use flag  ps              182           0
+          -3
+ line ignored in convinfo due to use flag  ps              183           0
+          -3
+ line ignored in convinfo due to use flag  ps              187           0
+          -3
+ line ignored in convinfo due to use flag  t               120           0
+          -3
+ line ignored in convinfo due to use flag  t               126           0
+          -3
+ line ignored in convinfo due to use flag  t               130           0
+          -3
+ line ignored in convinfo due to use flag  t               131           0
+          -3
+ line ignored in convinfo due to use flag  t               132           0
+          -3
+ line ignored in convinfo due to use flag  t               133           0
+          -3
+ line ignored in convinfo due to use flag  t               134           0
+          -3
+ line ignored in convinfo due to use flag  t               135           0
+          -3
+ line ignored in convinfo due to use flag  t               136           0
+          -3
+ line ignored in convinfo due to use flag  t               180           0
+          -3
+ line ignored in convinfo due to use flag  t               180           1
+          -3
+ line ignored in convinfo due to use flag  t               181           0
+          -3
+ line ignored in convinfo due to use flag  t               182           0
+          -3
+ line ignored in convinfo due to use flag  t               183           0
+          -3
+ line ignored in convinfo due to use flag  t               187           0
+          -3
+ line ignored in convinfo due to use flag  q               120           0
+          -3
+ line ignored in convinfo due to use flag  q               130           0
+          -3
+ line ignored in convinfo due to use flag  q               131           0
+          -3
+ line ignored in convinfo due to use flag  q               132           0
+          -3
+ line ignored in convinfo due to use flag  q               133           0
+          -3
+ line ignored in convinfo due to use flag  q               134           0
+          -3
+ line ignored in convinfo due to use flag  q               135           0
+          -3
+ line ignored in convinfo due to use flag  q               136           0
+          -3
+ line ignored in convinfo due to use flag  q               180           0
+          -3
+ line ignored in convinfo due to use flag  q               180           1
+          -3
+ line ignored in convinfo due to use flag  q               181           0
+          -3
+ line ignored in convinfo due to use flag  q               182           0
+          -3
+ line ignored in convinfo due to use flag  q               183           0
+          -3
+ line ignored in convinfo due to use flag  q               187           0
+          -3
+ line ignored in convinfo due to use flag  pw              152           0
+          -3
+ line ignored in convinfo due to use flag  pw              153           0
+          -3
+ line ignored in convinfo due to use flag  pw              156           0
+          -3
+ line ignored in convinfo due to use flag  pw              157           0
+          -3
+ line ignored in convinfo due to use flag  pw              158           0
+          -3
+ line ignored in convinfo due to use flag  pw              159           0
+          -3
+ line ignored in convinfo due to use flag  sst             181           0
+          -3
+ line ignored in convinfo due to use flag  sst             182           0
+          -3
+ line ignored in convinfo due to use flag  sst             183           0
+          -3
+ line ignored in convinfo due to use flag  sst             184           0
+          -3
+ line ignored in convinfo due to use flag  sst             185           0
+          -3
+ line ignored in convinfo due to use flag  sst             186           0
+          -3
+ line ignored in convinfo due to use flag  sst             187           0
+          -3
+ line ignored in convinfo due to use flag  sst             188           0
+          -3
+ line ignored in convinfo due to use flag  sst             189           0
+          -3
+ line ignored in convinfo due to use flag  sst             190           0
+          -3
+ line ignored in convinfo due to use flag  sst             191           0
+          -3
+ line ignored in convinfo due to use flag  sst             192           0
+          -3
+ line ignored in convinfo due to use flag  sst             193           0
+          -3
+ line ignored in convinfo due to use flag  sst             194           0
+          -3
+ line ignored in convinfo due to use flag  sst             195           0
+          -3
+ line ignored in convinfo due to use flag  sst             196           0
+          -3
+ line ignored in convinfo due to use flag  sst             197           0
+          -3
+ line ignored in convinfo due to use flag  sst             198           0
+          -3
+ line ignored in convinfo due to use flag  sst             199           0
+          -3
+ line ignored in convinfo due to use flag  uv              210           0
+          -3
+ line ignored in convinfo due to use flag  uv              216           0
+          -3
+ line ignored in convinfo due to use flag  uv              220           0
+          -3
+ line ignored in convinfo due to use flag  uv              221           0
+          -3
+ line ignored in convinfo due to use flag  uv              223           0
+          -3
+ line ignored in convinfo due to use flag  uv              224           0
+          -3
+ line ignored in convinfo due to use flag  uv              228           0
+          -3
+ line ignored in convinfo due to use flag  uv              229           0
+          -3
+ line ignored in convinfo due to use flag  uv              230           0
+          -3
+ line ignored in convinfo due to use flag  uv              231           0
+          -3
+ line ignored in convinfo due to use flag  uv              232           0
+          -3
+ line ignored in convinfo due to use flag  uv              233           0
+          -3
+ line ignored in convinfo due to use flag  uv              234           0
+          -3
+ line ignored in convinfo due to use flag  uv              235           0
+          -3
+ line ignored in convinfo due to use flag  uv              236           0
+          -3
+ line ignored in convinfo due to use flag  uv              240           0
+          -3
+ line ignored in convinfo due to use flag  uv              240         257
+          -3
+ line ignored in convinfo due to use flag  uv              240         259
+          -3
+ line ignored in convinfo due to use flag  uv              240         270
+          -3
+ line ignored in convinfo due to use flag  uv              240         271
+          -3
+ line ignored in convinfo due to use flag  uv              241           0
+          -3
+ line ignored in convinfo due to use flag  uv              242           0
+          -3
+ line ignored in convinfo due to use flag  uv              242         171
+          -3
+ line ignored in convinfo due to use flag  uv              242         172
+          -3
+ line ignored in convinfo due to use flag  uv              242         173
+          -3
+ line ignored in convinfo due to use flag  uv              242         174
+          -3
+ line ignored in convinfo due to use flag  uv              243           0
+          -3
+ line ignored in convinfo due to use flag  uv              243          54
+          -3
+ line ignored in convinfo due to use flag  uv              243          55
+          -3
+ line ignored in convinfo due to use flag  uv              243          56
+          -3
+ line ignored in convinfo due to use flag  uv              243          57
+          -3
+ line ignored in convinfo due to use flag  uv              243          70
+          -3
+ line ignored in convinfo due to use flag  uv              244           0
+          -3
+ line ignored in convinfo due to use flag  uv              244           3
+          -3
+ line ignored in convinfo due to use flag  uv              244           4
+          -3
+ line ignored in convinfo due to use flag  uv              244         206
+          -3
+ line ignored in convinfo due to use flag  uv              244         207
+          -3
+ line ignored in convinfo due to use flag  uv              244         209
+          -3
+ line ignored in convinfo due to use flag  uv              244         223
+          -3
+ line ignored in convinfo due to use flag  uv              245           0
+          -3
+ line ignored in convinfo due to use flag  uv              245         257
+          -3
+ line ignored in convinfo due to use flag  uv              245         259
+          -3
+ line ignored in convinfo due to use flag  uv              245         270
+          -3
+ line ignored in convinfo due to use flag  uv              245         271
+          -3
+ line ignored in convinfo due to use flag  uv              246           0
+          -3
+ line ignored in convinfo due to use flag  uv              246         257
+          -3
+ line ignored in convinfo due to use flag  uv              246         259
+          -3
+ line ignored in convinfo due to use flag  uv              246         270
+          -3
+ line ignored in convinfo due to use flag  uv              246         271
+          -3
+ line ignored in convinfo due to use flag  uv              247           0
+          -3
+ line ignored in convinfo due to use flag  uv              247         257
+          -3
+ line ignored in convinfo due to use flag  uv              247         259
+          -3
+ line ignored in convinfo due to use flag  uv              247         270
+          -3
+ line ignored in convinfo due to use flag  uv              247         271
+          -3
+ line ignored in convinfo due to use flag  uv              248           0
+          -3
+ line ignored in convinfo due to use flag  uv              249           0
+          -3
+ line ignored in convinfo due to use flag  uv              250           0
+          -3
+ line ignored in convinfo due to use flag  uv              250         171
+          -3
+ line ignored in convinfo due to use flag  uv              250         172
+          -3
+ line ignored in convinfo due to use flag  uv              250         173
+          -3
+ line ignored in convinfo due to use flag  uv              250         174
+          -3
+ line ignored in convinfo due to use flag  uv              251           0
+          -3
+ line ignored in convinfo due to use flag  uv              251         257
+          -3
+ line ignored in convinfo due to use flag  uv              251         259
+          -3
+ line ignored in convinfo due to use flag  uv              251         270
+          -3
+ line ignored in convinfo due to use flag  uv              251         271
+          -3
+ line ignored in convinfo due to use flag  uv              252           0
+          -3
+ line ignored in convinfo due to use flag  uv              252         171
+          -3
+ line ignored in convinfo due to use flag  uv              252         172
+          -3
+ line ignored in convinfo due to use flag  uv              252         173
+          -3
+ line ignored in convinfo due to use flag  uv              252         174
+          -3
+ line ignored in convinfo due to use flag  uv              253           0
+          -3
+ line ignored in convinfo due to use flag  uv              253          54
+          -3
+ line ignored in convinfo due to use flag  uv              253          55
+          -3
+ line ignored in convinfo due to use flag  uv              253          56
+          -3
+ line ignored in convinfo due to use flag  uv              253          57
+          -3
+ line ignored in convinfo due to use flag  uv              253          70
+          -3
+ line ignored in convinfo due to use flag  uv              254           0
+          -3
+ line ignored in convinfo due to use flag  uv              254          54
+          -3
+ line ignored in convinfo due to use flag  uv              254          55
+          -3
+ line ignored in convinfo due to use flag  uv              254          56
+          -3
+ line ignored in convinfo due to use flag  uv              254          57
+          -3
+ line ignored in convinfo due to use flag  uv              254          70
+          -3
+ line ignored in convinfo due to use flag  uv              255           0
+          -3
+ line ignored in convinfo due to use flag  uv              255         854
+          -3
+ line ignored in convinfo due to use flag  uv              256           0
+          -3
+ line ignored in convinfo due to use flag  uv              257           0
+          -3
+ line ignored in convinfo due to use flag  uv              257         783
+          -3
+ line ignored in convinfo due to use flag  uv              257         784
+          -3
+ line ignored in convinfo due to use flag  uv              258           0
+          -3
+ line ignored in convinfo due to use flag  uv              258         783
+          -3
+ line ignored in convinfo due to use flag  uv              258         784
+          -3
+ line ignored in convinfo due to use flag  uv              259           0
+          -3
+ line ignored in convinfo due to use flag  uv              259         783
+          -3
+ line ignored in convinfo due to use flag  uv              259         784
+          -3
+ line ignored in convinfo due to use flag  uv              260           0
+          -3
+ line ignored in convinfo due to use flag  uv              260         224
+          -3
+ line ignored in convinfo due to use flag  uv              260         225
+          -3
+ line ignored in convinfo due to use flag  uv              270           0
+          -3
+ line ignored in convinfo due to use flag  uv              280           0
+          -3
+ line ignored in convinfo due to use flag  uv              280           1
+          -3
+ line ignored in convinfo due to use flag  uv              281           0
+          -3
+ line ignored in convinfo due to use flag  uv              282           0
+          -3
+ line ignored in convinfo due to use flag  uv              284           0
+          -3
+ line ignored in convinfo due to use flag  uv              285           0
+          -3
+ line ignored in convinfo due to use flag  uv              286           0
+          -3
+ line ignored in convinfo due to use flag  uv              287           0
+          -3
+ line ignored in convinfo due to use flag  uv              289           0
+          -3
+ line ignored in convinfo due to use flag  uv              290           4
+          -3
+ line ignored in convinfo due to use flag  uv              290           3
+          -3
+ line ignored in convinfo due to use flag  uv              290           5
+          -3
+ line ignored in convinfo due to use flag  uv              291           0
+          -3
+ line ignored in convinfo due to use flag  uv              296           0
+          -3
+ line ignored in convinfo due to use flag  spd             283           0
+          -3
+ line ignored in convinfo due to use flag  dw              999           0
+          -3
+ line ignored in convinfo due to use flag  dw              201           0
+          -3
+ line ignored in convinfo due to use flag  dw              202           0
+          -3
+ line ignored in convinfo due to use flag  dw              100           0
+          -3
+ line ignored in convinfo due to use flag  dw              101           0
+          -3
+ line ignored in convinfo due to use flag  srw             999           0
+          -3
+ line ignored in convinfo due to use flag  rw              999           0
+          -3
+ line ignored in convinfo due to use flag  gps               4           0
+          -3
+ line ignored in convinfo due to use flag  gps              41           0
+          -3
+ line ignored in convinfo due to use flag  gps             722           0
+          -3
+ line ignored in convinfo due to use flag  gps             723           0
+          -3
+ line ignored in convinfo due to use flag  gps             740           0
+          -3
+ line ignored in convinfo due to use flag  gps             741           0
+          -3
+ line ignored in convinfo due to use flag  gps             742           0
+          -3
+ line ignored in convinfo due to use flag  gps             743           0
+          -3
+ line ignored in convinfo due to use flag  gps             744           0
+          -3
+ line ignored in convinfo due to use flag  gps             745           0
+          -3
+ line ignored in convinfo due to use flag  gps             820           0
+          -3
+ line ignored in convinfo due to use flag  gps              42           0
+          -3
+ line ignored in convinfo due to use flag  gps              43           0
+          -3
+ line ignored in convinfo due to use flag  gps             786           0
+          -3
+ line ignored in convinfo due to use flag  gps             421           0
+          -3
+ line ignored in convinfo due to use flag  gps               3           0
+          -3
+ line ignored in convinfo due to use flag  gps             821           0
+          -3
+ line ignored in convinfo due to use flag  gps             825           0
+          -3
+ line ignored in convinfo due to use flag  gps             440           0
+          -3
+ line ignored in convinfo due to use flag  pm2_5           102           0
+          -3
+ line ignored in convinfo due to use flag  pm10            102           0
+          -3
+ line ignored in convinfo due to use flag  gps             750           0
+          -3
+ line ignored in convinfo due to use flag  gps             751           0
+          -3
+ line ignored in convinfo due to use flag  gps             752           0
+          -3
+ line ignored in convinfo due to use flag  gps             753           0
+          -3
+ line ignored in convinfo due to use flag  gps             754           0
+          -3
+ line ignored in convinfo due to use flag  gps             755           0
+          -3
+ line ignored in convinfo due to use flag  gps             724           0
+          -3
+ line ignored in convinfo due to use flag  gps             725           0
+          -3
+ line ignored in convinfo due to use flag  gps             726           0
+          -3
+ line ignored in convinfo due to use flag  gps             727           0
+          -3
+ line ignored in convinfo due to use flag  gps             728           0
+          -3
+ line ignored in convinfo due to use flag  gps             729           0
+          -3
+ line ignored in convinfo due to use flag  gps              44           0
+          -3
+ line ignored in convinfo due to use flag  gps               5           0
+          -3
+ line ignored in convinfo due to use flag  gps             265           0
+          -3
+ line ignored in convinfo due to use flag  gps             266           0
+          -3
+ line ignored in convinfo due to use flag  gps             267           0
+          -3
+ line ignored in convinfo due to use flag  gps             268           0
+          -3
+ line ignored in convinfo due to use flag  gps             269           0
+          -3
+ glbsoi: starting ...
+ gsi_metguess_mod*create_: alloc() for met-guess done
+ gsi_chemguess_mod*create_: alloc() for chem-tracer done
+GENERAL_READ_GFSATM_NC: different spatial dimension nlatm2 =  768 latb = 1536
+GENERAL_READ_GFSATM_NC: different spatial dimension nlon   = 1536 lonb = 3072
+GENERAL_READ_GFSATM_NC: read lonb,latb,levs=  3072  1536   127, scatter nlon,nlat=  1536   768, hour=   6.0, idate=   18    5   31 2021 sigf06
+ READ_GFS_NETCDF: l_cld_derived =  T
+  - Using prescribed co2 global mean value=   412.415676400000      
+ for Julian Day   2459367.00000000     
+ GLBSOI: ***WARNING*** reset bkgv_flowdep= F , because only            1 
+  guess time level available
+ control_vectors: length=     8517864
+ control_vectors: currently allocated=           0
+ control_vectors: maximum allocated=           0
+ control_vectors: number of allocates=           0
+ control_vectors: number of deallocates=           0
+control_vectors: Estimated max memory used=      0.0 Mb
+ CONVERR:  using observation errors from user provided table
+ read_obs_check: bufr file date is   2021060100 uprair uv                  
+ read_obs_check: bufr file date is   2021060100 uprair ps                  
+ read_obs_check: bufr file date is   2021060100 uprair t                   
+ read_obs_check: bufr file date is   2021060100 uprair q                   
+  number of extra processors           96
+ READ_OBS:  read    1 ps         ps                   using ntasks=   1   0      1 999999 999999
+ READ_OBS:  read    2 t          t                    using ntasks=   1   1      1 999999 999999
+ READ_OBS:  read    3 q          q                    using ntasks=   1   2      1 999999 999999
+ READ_OBS:  read    4 uv         uv                   using ntasks=   1   3      1 999999 999999
+ GETNST: enter with nlat_sfc,nlon_sfc=        1538        3072  and nlat,nlon=
+         770        1536
+ read_sfc netcdf, with NSST variables
+ ncepnems_io::read_hsst(read_hsst):  read error amplitudes "berror_stats".  
+ nsigstat,nlatstat =         127         770
+ in read_hsst_, cwoption =            3
+ var, isig, istat : sf            127           0
+ var, isig, istat : vp            127           0
+ var, isig, istat : t             127           0
+ var, isig, istat : q             127           0
+ var, isig, istat : oz            127           0
+ var, isig, istat : cw            127           0
+ var, isig, istat : ps              1           0
+ var, isig, istat : sst             1           0
+ read hsst from berror_stats
+================================================================================
+Status   Var          Mean                 Min                    Max
+sfcges2 FC10   1.000901743505E+00   9.265705943108E-01   1.497625946999E+00
+sfcges2 SNOW   2.347162338806E+01   0.000000000000E+00   4.372508544922E+02
+sfcges2 VFRC  -9.999990000000E+04  -9.999990000000E+04  -9.999990000000E+04
+sfcges2 SRGH   0.000000000000E+00   0.000000000000E+00   0.000000000000E+00
+sfcges2 STMP  -9.999990000000E+04  -9.999990000000E+04  -9.999990000000E+04
+sfcges2 SMST  -9.999990000000E+04  -9.999990000000E+04  -9.999990000000E+04
+sfcges2 SST    2.770741493281E+02   1.949619140625E+02   3.336711120605E+02
+sfcges2 VTYP  -9.999990000000E+04  -9.999990000000E+04  -9.999990000000E+04
+sfcges2 ISLI   6.013571975238E-01   0.000000000000E+00   2.000000000000E+00
+sfcges2 STYP  -9.999990000000E+04  -9.999990000000E+04  -9.999990000000E+04
+================================================================================
+ in mbuoy_info,n_comps =          3 n_scripps =         40 n_triton =         70 n_3mdiscus =        153
+ in mbuoyb_info,n_comps =          3 n_scripps =         40 n_triton =         70 n_3mdiscus =        153
+  in read_ship_info, n_ship =         2011
+ READ_HDRAOB: messages/reports =          226 /         398  ntread = 
+           1
+ READ_HDRAOB: messages/reports =          226 /         398  ntread = 
+           1
+ READ_HDRAOB: messages/reports =          226 /         398  ntread = 
+           1
+ READ_HDRAOB: messages/reports =          226 /         398  ntread = 
+           1
+ Station ID:       71815
+ Station ID:       61660
+ Station ID:       72582
+ Station ID:       94996
+ Station ID:       71815
+ Station ID:       61660
+ Station ID:       94638
+ Station ID:       47418
+ Station ID:       72582
+ Station ID:       71815
+ Station ID:       61660
+ Station ID:       94996
+ Station ID:       71815
+ Station ID:       47741
+ Station ID:       61660
+ Station ID:       10868
+ Station ID:       72582
+ Station ID:       94638
+ Station ID:       72582
+ Station ID:       94998
+ Station ID:       94996
+ Station ID:       94996
+ Station ID:       47418
+ Station ID:       94461
+ Station ID:       94638
+ Station ID:       94638
+ Station ID:       47169
+ Station ID:       47418
+ Station ID:       47418
+ Station ID:       47741
+ Station ID:       72250
+ Station ID:       94653
+ Station ID:       47741
+ Station ID:       47741
+ Station ID:       10868
+ Station ID:       72265
+ Station ID:       73110
+ Station ID:       94998
+ Station ID:       10868
+ Station ID:       10868
+ Station ID:        8190
+ Station ID:       94461
+ Station ID:       94998
+ Station ID:       94998
+ Station ID:       94461
+ Station ID:       16113
+ Station ID:       47169
+ Station ID:       94461
+ Station ID:       70026
+ Station ID:       47169
+ Station ID:       47169
+ Station ID:       72210
+ Station ID:       72250
+ Station ID:       10113
+ Station ID:       72250
+ Station ID:       72250
+ Station ID:       47412
+ Station ID:       10184
+ Station ID:       47918
+ Station ID:       94653
+ Station ID:       94653
+ Station ID:       72365
+ Station ID:       94653
+ Station ID:       72265
+ Station ID:       47909
+ Station ID:       72265
+ Station ID:       72265
+ Station ID:       72662
+ Station ID:       72293
+ Station ID:       73110
+ Station ID:        8190
+ Station ID:        8023
+ Station ID:       73110
+ Station ID:       73110
+ Station ID:       72493
+ Station ID:       76458
+ Station ID:        8190
+ Station ID:        8190
+ Station ID:       16113
+ Station ID:       16064
+ Station ID:       76644
+ Station ID:       94802
+ Station ID:       76692
+ Station ID:       76903
+ Station ID:       76612
+ Station ID:       16113
+ Station ID:       16113
+ Station ID:       72694
+ Station ID:       70026
+ Station ID:       72649
+ Station ID:       70026
+ Station ID:       70026
+ Station ID:       10238
+ Station ID:       10739
+ Station ID:       72210
+ Station ID:       16045
+ Station ID:       94430
+ Station ID:       72210
+ Station ID:       72210
+ Station ID:       94659
+ Station ID:       72797
+ Station ID:       10113
+ Station ID:       72659
+ Station ID:       47412
+ Station ID:       10113
+ Station ID:       10113
+ Station ID:       72251
+ Station ID:       47412
+ Station ID:       94866
+ Station ID:       47412
+ Station ID:       10184
+ Station ID:       72562
+ Station ID:       47918
+ Station ID:       10184
+ Station ID:       94578
+ Station ID:       10184
+ Station ID:       47918
+ Station ID:       72672
+ Station ID:       47918
+ Station ID:       94672
+ Station ID:       72365
+ Station ID:       72451
+ Station ID:       72365
+ Station ID:       72365
+ Station ID:       70316
+ Station ID:       47909
+ Station ID:       10393
+ Station ID:       72662
+ Station ID:       47909
+ Station ID:       47646
+ Station ID:       47909
+ Station ID:       72662
+ Station ID:       72476
+ Station ID:       72662
+ Station ID:       94302
+ Station ID:       94374
+ Station ID:       72293
+ Station ID:       72518
+ Station ID:       72293
+ Station ID:       72293
+ Station ID:       72764
+ Station ID:        8023
+ Station ID:        1400
+ Station ID:       10035
+ Station ID:        8023
+ Station ID:        3354
+ Station ID:        8023
+ Station ID:       16622
+ Station ID:       94312
+ Station ID:       72493
+ Station ID:       10618
+ Station ID:       10410
+ Station ID:       72493
+ Station ID:       76458
+ Station ID:       72493
+ Station ID:       72645
+ Station ID:       16064
+ Station ID:       76458
+ Station ID:       47401
+ Station ID:       76458
+ Station ID:       76644
+ Station ID:       47102
+ Station ID:       16064
+ Station ID:       70326
+ Station ID:       94802
+ Station ID:       16064
+ Station ID:       76692
+ Station ID:       76903
+ Station ID:       76612
+ Station ID:       76644
+ Station ID:       72274
+ Station ID:       60630
+ Station ID:       60656
+ Station ID:       76644
+ Station ID:       94802
+ Station ID:       72694
+ Station ID:       94802
+ Station ID:       70200
+ Station ID:       76692
+ Station ID:       76903
+ Station ID:       76612
+ Station ID:       76692
+ Station ID:       76903
+ Station ID:       76612
+ Station ID:        8383
+ Station ID:       72694
+ Station ID:       72694
+ Station ID:       72489
+ Station ID:       72649
+ Station ID:       72712
+ Station ID:       72649
+ Station ID:       72649
+ Station ID:       72206
+ Station ID:       70133
+ Station ID:       10238
+ Station ID:       72426
+ Station ID:       47104
+ Station ID:       10739
+ Station ID:       10238
+ Station ID:       10771
+ Station ID:       10238
+ Station ID:       10739
+ Station ID:       72528
+ Station ID:       16045
+ Station ID:       10739
+ Station ID:        3238
+ Station ID:       16045
+ Station ID:       94430
+ Station ID:       72597
+ Station ID:       16045
+ Station ID:       94659
+ Station ID:       72558
+ Station ID:       94430
+ Station ID:       94430
+ Station ID:       72797
+ Station ID:       72340
+ Station ID:       94659
+ Station ID:       94659
+ Station ID:       72305
+ Station ID:       72797
+ Station ID:       72797
+ Station ID:       72440
+ Station ID:       72659
+ Station ID:       72208
+ Station ID:       72659
+ Station ID:       72659
+ Station ID:       70308
+ Station ID:       72768
+ Station ID:       72251
+ Station ID:       72388
+ Station ID:        3882
+ Station ID:       72251
+ Station ID:       72251
+ Station ID:       72317
+ Station ID:       94866
+ Station ID:       72572
+ Station ID:       94866
+ Station ID:       72562
+ Station ID:       72201
+ Station ID:       94866
+ Station ID:       72786
+ Station ID:       72562
+ Station ID:       72562
+ Station ID:       70273
+ Station ID:       94578
+ Station ID:       72230
+ Station ID:        8430
+ Station ID:       94578
+ Station ID:       72672
+ Station ID:       94578
+ Station ID:       72363
+ Station ID:       72672
+ Station ID:       72233
+ Station ID:       72672
+ Station ID:       16144
+ Station ID:       94672
+ Station ID:        8001
+ Station ID:       76654
+ Station ID:       94403
+ Station ID:       94672
+ Station ID:       72451
+ Station ID:       94672
+ Station ID:       47678
+ Station ID:       76595
+ Station ID:       70350
+ Station ID:       72451
+ Station ID:       72451
+ Station ID:       72261
+ Station ID:       70361
+ Station ID:       70316
+ Station ID:       72215
+ Station ID:       70219
+ Station ID:       94995
+ Station ID:       70316
+ Station ID:       70316
+ Station ID:       74560
+ Station ID:       10393
+ Station ID:       72327
+ Station ID:       10393
+ Station ID:       47646
+ Station ID:       72376
+ Station ID:       10393
+ Station ID:       94326
+ Station ID:       70231
+ Station ID:       47646
+ Station ID:        7510
+ Station ID:       47646
+ Station ID:       72476
+ Station ID:       94299
+ Station ID:       74389
+ Station ID:       72476
+ Station ID:       72476
+ Station ID:       72235
+ Station ID:       94302
+ Station ID:       94374
+ Station ID:       72501
+ Station ID:       94302
+ Station ID:       47778
+ Station ID:       94302
+ Station ID:       94374
+ Station ID:       72518
+ Station ID:       47582
+ Station ID:       94374
+ Station ID:       94120
+ Station ID:       72518
+ Station ID:       16429
+ Station ID:       72518
+ Station ID:       72776
+ Station ID:       72764
+ Station ID:       72364
+ Station ID:       72764
+ Station ID:       16332
+ Station ID:       72764
+ Station ID:       70261
+ Station ID:        1400
+ Station ID:       72632
+ Station ID:       10035
+ Station ID:        1400
+ Station ID:       94610
+ Station ID:        3354
+ Station ID:        1400
+ Station ID:        1010
+ Station ID:       10035
+ Station ID:        7645
+ Station ID:       10035
+ Station ID:        3354
+ Station ID:       72214
+ Station ID:       16622
+ Station ID:        3354
+ Station ID:        1415
+ Station ID:       94312
+ Station ID:       16622
+ Station ID:       94510
+ Station ID:       71924
+ Station ID:       16622
+ Station ID:       10618
+ Station ID:       47827
+ Station ID:       94312
+ Station ID:       94975
+ Station ID:       60155
+ Station ID:       10410
+ Station ID:       94203
+ Station ID:       71802
+ Station ID:       94312
+ Station ID:       10618
+ Station ID:        7145
+ Station ID:       94776
+ Station ID:       10618
+ Station ID:       10410
+ Station ID:       72645
+ Station ID:        3953
+ Station ID:       10410
+ Station ID:        2365
+ Station ID:       74646
+ Station ID:       71109
+ Station ID:       72645
+ Station ID:       71945
+ Station ID:       72645
+ Station ID:       72520
+ Station ID:       74646
+ Station ID:       47401
+ Station ID:       72634
+ Station ID:       71906
+ Station ID:        2836
+ Station ID:       47401
+ Station ID:       47102
+ Station ID:        1001
+ Station ID:       47401
+ Station ID:       47138
+ Station ID:       70326
+ Station ID:        1028
+ Station ID:       47102
+ Station ID:        3005
+ Station ID:       71913
+ Station ID:       72274
+ Station ID:       47102
+ Station ID:       94150
+ Station ID:       71811
+ Station ID:       70326
+ Station ID:       16754
+ Station ID:       70326
+ Station ID:       72274
+ Station ID:       60630
+ Station ID:       60656
+ Station ID:       16245
+ Station ID:       72274
+ Station ID:       71081
+ Station ID:       71925
+ Station ID:       70200
+ Station ID:        3808
+ Station ID:       94332
+ Station ID:       60630
+ Station ID:       60656
+ Station ID:       47186
+ Station ID:       70200
+ Station ID:       60630
+ Station ID:       60656
+ Station ID:        8383
+ Station ID:        8221
+ Station ID:       70200
+ Station ID:        7761
+ Station ID:       71957
+ Station ID:        8383
+ Station ID:       47155
+ Station ID:       71909
+ Station ID:        8383
+ Station ID:       72489
+ Station ID:       16546
+ Station ID:        8302
+ Station ID:       60390
+ Station ID:       71033
+ Station ID:       71907
+ Station ID:       71926
+ Station ID:       71119
+ Station ID:       72489
+ Station ID:       72248
+ Station ID:       72489
+ Station ID:       71603
+ Station ID:       71823
+ Station ID:       71082
+ Station ID:       71908
+ Station ID:       71845
+ Station ID:       10548
+ Station ID:       72712
+ Station ID:       71934
+ Station ID:       71816
+ Station ID:       60018
+ Station ID:       71043
+ Station ID:       71722
+ Station ID:       72712
+ Station ID:        2527
+ Station ID:       71867
+ Station ID:       71836
+ Station ID:       72712
+ Station ID:        2963
+ Station ID:       47600
+ Station ID:       72206
+ Station ID:        7110
+ Station ID:       47418
+ Station ID:       47741
+ Station ID:       71917
+ Station ID:       94302
+ Station ID:       94312
+ Station ID:       94332
+ Station ID:       94975
+ Station ID:       94996
+ Station ID:       94998
+ Station ID:       94638
+ Station ID:       94653
+ Station ID:       94659
+ Station ID:       94672
+ Station ID:       94995
+ Station ID:       88889
+ Station ID:       72206
+ Station ID:       70398
+ Station ID:       94120
+ Station ID:       94203
+ Station ID:       94299
+ Station ID:       94374
+ Station ID:       94403
+ Station ID:       94430
+ Station ID:       94461
+ Station ID:       94510
+ Station ID:       94578
+ Station ID:       94610
+ Station ID:       70133
+ Station ID:       72206
+ Station ID:       47945
+ Station ID:       72426
+ Station ID:       61980
+ Station ID:       52681
+ Station ID:       53915
+ Station ID:       54374
+ Station ID:       54662
+ Station ID:       54857
+ Station ID:       57178
+ Station ID:       57461
+ Station ID:       70133
+ Station ID:       57516
+ Station ID:       57749
+ Station ID:       57972
+ Station ID:       58150
+ Station ID:       58457
+ Station ID:       59758
+ Station ID:       59981
+ Station ID:       52866
+ Station ID:       50557
+ Station ID:       50953
+ Station ID:       53068
+ Station ID:       53513
+ Station ID:       54102
+ Station ID:       54161
+ Station ID:       54292
+ Station ID:       70133
+ Station ID:       56080
+ Station ID:       56739
+ Station ID:       56964
+ Station ID:       57957
+ Station ID:       57993
+ Station ID:       58027
+ Station ID:       58424
+ Station ID:       58606
+ Station ID:       58633
+ Station ID:       72426
+ Station ID:       58665
+ Station ID:       59211
+ Station ID:       56029
+ Station ID:       50527
+ Station ID:       50774
+ Station ID:       52418
+ Station ID:       52818
+ Station ID:       52267
+ Station ID:       52323
+ Station ID:       52836
+ Station ID:       54135
+ Station ID:       47646
+ Station ID:       47778
+ Station ID:       47807
+ Station ID:       47827
+ Station ID:       47909
+ Station ID:       47918
+ Station ID:       72426
+ Station ID:       47971
+ Station ID:       47401
+ Station ID:       47412
+ Station ID:       47582
+ Station ID:       47600
+ Station ID:       55299
+ Station ID:       55591
+ Station ID:       56137
+ Station ID:       56691
+ Station ID:       56985
+ Station ID:       57447
+ Station ID:       58203
+ Station ID:       59265
+ Station ID:       52533
+ Station ID:       52983
+ Station ID:       53463
+ Station ID:       47104
+ Station ID:       53845
+ Station ID:       54218
+ Station ID:       54727
+ Station ID:       57083
+ Station ID:       57127
+ Station ID:       57131
+ Station ID:       56778
+ Station ID:       57494
+ Station ID:       57687
+ Station ID:       57816
+ Station ID:       58238
+ Station ID:       58362
+ Station ID:       59280
+ Station ID:       59431
+ Station ID:       53772
+ Station ID:       58725
+ Station ID:       59134
+ Station ID:       58847
+ Station ID:       54511
+ Station ID:       47945
+ Station ID:       47678
+ Station ID:       59316
+ Station ID:       51076
+ Station ID:       51431
+ Station ID:       56146
+ Station ID:       56571
+ Station ID:       51709
+ Station ID:       51777
+ Station ID:       51644
+ Station ID:       51828
+ Station ID:       53614
+ Station ID:       51839
+ Station ID:       52203
+ Station ID:       51463
+ Station ID:       56187
+ Station ID:       10771
+ Station ID:       47104
+ Station ID:       72249
+ Station ID:       94776
+ Station ID:       70326
+ Station ID:       70361
+ Station ID:       70273
+ Station ID:       70398
+ Station ID:       47104
+ Station ID:       72528
+ Station ID:       47991
+ Station ID:       47991
+ Station ID:       10771
+ Station ID:       10771
+ Station ID:       72528
+ Station ID:       72528
+ Station ID:        3238
+ Station ID:        3238
+ Station ID:       72597
+ Station ID:        3238
+ Station ID:       72597
+ Station ID:       17600
+ Station ID:       17609
+ Station ID:       41506
+ Station ID:       41515
+ Station ID:       41560
+ Station ID:       41571
+ Station ID:       41598
+ Station ID:       41620
+ Station ID:       41624
+ Station ID:       41640
+ Station ID:       41685
+ Station ID:       41710
+ Station ID:       41712
+ Station ID:       41715
+ Station ID:       41718
+ Station ID:       41739
+ Station ID:       41744
+ Station ID:       41749
+ Station ID:       41768
+ Station ID:       41529
+ Station ID:       41594
+ Station ID:       41660
+ Station ID:       41675
+ Station ID:       41756
+ Station ID:       41780
+ Station ID:       48378
+ Station ID:       48431
+ Station ID:       48477
+ Station ID:       48500
+ Station ID:       72597
+  number of high resolution ps stations          249
+
+ Station ID:       72558
+ Station ID:       72558
+ Station ID:       72558
+ Station ID:       72340
+ Station ID:       72340
+ Station ID:       72340
+ Station ID:       72305
+ Station ID:       72305
+ Station ID:       72305
+ Station ID:       72440
+ Station ID:       72440
+ Station ID:       72440
+ Station ID:       72208
+ Station ID:       72208
+ Station ID:       72208
+ Station ID:       70308
+ Station ID:       70308
+ Station ID:       72768
+ Station ID:       70308
+ Station ID:       72768
+ Station ID:       72768
+ Station ID:       72388
+ Station ID:       72388
+ Station ID:        3882
+ Station ID:       72388
+ Station ID:       72317
+ Station ID:        3882
+ Station ID:        3882
+ Station ID:       72317
+ Station ID:       72572
+ Station ID:       72317
+ Station ID:       72572
+ Station ID:       72201
+ Station ID:       72572
+ Station ID:       72201
+ Station ID:       72786
+ Station ID:       72201
+  inconsistent descent          119       72201        5926 IUDD02  
+ Station ID:       72786
+ Station ID:       70273
+ Station ID:       72786
+ Station ID:       70273
+ Station ID:       72230
+ Station ID:       70273
+ Station ID:       72230
+ Station ID:        8430
+ Station ID:       72230
+ Station ID:        8430
+ Station ID:       72363
+ Station ID:        8430
+ Station ID:       72363
+ Station ID:       72233
+ Station ID:       72363
+ Station ID:       72233
+ Station ID:       16144
+ Station ID:       72233
+ Station ID:        8001
+ Station ID:       16144
+ Station ID:       76654
+ Station ID:       16144
+ Station ID:       94403
+ Station ID:        8001
+ Station ID:       47678
+ Station ID:       76595
+ Station ID:        8001
+ Station ID:       70350
+ Station ID:       76654
+ Station ID:       94403
+ Station ID:       47678
+ Station ID:       76595
+ Station ID:       76654
+ Station ID:       94403
+ Station ID:       72261
+ Station ID:       70350
+ Station ID:       47678
+ Station ID:       76595
+ Station ID:       70350
+ Station ID:       70361
+ Station ID:       72261
+ Station ID:       72215
+ Station ID:       72261
+ Station ID:       70361
+ Station ID:       72215
+ Station ID:       70361
+ Station ID:       70219
+ Station ID:       72215
+ Station ID:       94995
+ Station ID:       70219
+ Station ID:       74560
+ Station ID:       70219
+ Station ID:       94995
+ Station ID:       94995
+ Station ID:       74560
+ Station ID:       72327
+ Station ID:       74560
+ Station ID:       72327
+ Station ID:       72376
+ Station ID:       72327
+ Station ID:       72376
+ Station ID:       94326
+ Station ID:       70231
+ Station ID:       72376
+ Station ID:       94326
+ Station ID:        7510
+ Station ID:       70231
+ Station ID:       94326
+ Station ID:       94299
+ Station ID:       70231
+ Station ID:        7510
+ Station ID:       74389
+ Station ID:        7510
+ Station ID:       94299
+ Station ID:       94299
+ Station ID:       74389
+ Station ID:       72235
+ Station ID:       74389
+ Station ID:       72235
+ Station ID:       72501
+ Station ID:       72235
+ Station ID:       72501
+ Station ID:       47778
+ Station ID:       72501
+ Station ID:       47582
+ Station ID:       47778
+ Station ID:       94120
+ Station ID:       47778
+ Station ID:       47582
+ Station ID:       16429
+ Station ID:       94120
+ Station ID:       47582
+ Station ID:       72776
+ Station ID:       16429
+ Station ID:       94120
+ Station ID:       16429
+ Station ID:       72776
+ Station ID:       72364
+ Station ID:       72776
+ Station ID:       72364
+ Station ID:       16332
+ Station ID:       72364
+ Station ID:       70261
+ Station ID:       16332
+ Station ID:       70261
+ Station ID:       72632
+ Station ID:       16332
+ Station ID:       70261
+ Station ID:       72632
+ Station ID:       94610
+ Station ID:       72632
+ Station ID:        1010
+ Station ID:       94610
+ Station ID:        7645
+ Station ID:        1010
+ Station ID:       94610
+ Station ID:       72214
+ Station ID:        7645
+ Station ID:        1010
+ Station ID:       72214
+ Station ID:        7645
+ Station ID:        1415
+ Station ID:       72214
+ Station ID:       94510
+ Station ID:       71924
+ Station ID:        1415
+ Station ID:       47827
+ Station ID:       94510
+ Station ID:       71924
+ Station ID:        1415
+ Station ID:       94975
+ Station ID:       47827
+ Station ID:       60155
+ Station ID:       94203
+ Station ID:       94510
+ Station ID:       71924
+ Station ID:       71802
+ Station ID:       94975
+ Station ID:        7145
+ Station ID:       47827
+ Station ID:       60155
+ Station ID:       94776
+ Station ID:       94203
+ Station ID:       71802
+ Station ID:        3953
+ Station ID:       94975
+ Station ID:        7145
+ Station ID:       60155
+ Station ID:       94776
+ Station ID:       94203
+ Station ID:       71802
+ Station ID:        3953
+ Station ID:        2365
+ Station ID:        7145
+ Station ID:       94776
+ Station ID:       74646
+ Station ID:       71109
+ Station ID:       71945
+ Station ID:        3953
+ Station ID:       72520
+ Station ID:        2365
+ Station ID:       74646
+ Station ID:       71109
+ Station ID:       71945
+ Station ID:        2365
+ Station ID:       72520
+ Station ID:       74646
+ Station ID:       74646
+ Station ID:       71109
+ Station ID:       71945
+ Station ID:       72634
+ Station ID:       72520
+ Station ID:       74646
+ Station ID:       72634
+ Station ID:       71906
+ Station ID:        2836
+ Station ID:       74646
+ Station ID:        1001
+ Station ID:       72634
+ Station ID:       71906
+ Station ID:        2836
+ Station ID:       47138
+ Station ID:        1001
+ Station ID:       71906
+ Station ID:        1028
+ Station ID:        2836
+ Station ID:       47138
+ Station ID:        3005
+ Station ID:        1001
+ Station ID:        1028
+ Station ID:       71913
+ Station ID:       94150
+ Station ID:       47138
+ Station ID:        3005
+ Station ID:       71811
+ Station ID:       16754
+ Station ID:        1028
+ Station ID:       71913
+ Station ID:       94150
+ Station ID:        3005
+ Station ID:       71811
+ Station ID:       16245
+ Station ID:       16754
+ Station ID:       71913
+ Station ID:       71081
+ Station ID:       71925
+ Station ID:       94150
+ Station ID:        3808
+ Station ID:       71811
+ Station ID:       16245
+ Station ID:       16754
+ Station ID:       71081
+ Station ID:       71925
+ Station ID:       94332
+ Station ID:        3808
+ Station ID:       16245
+ Station ID:       47186
+ Station ID:       71081
+ Station ID:       71925
+ Station ID:       94332
+ Station ID:        3808
+ Station ID:        8221
+ Station ID:       47186
+ Station ID:       94332
+ Station ID:        8221
+ Station ID:        7761
+ Station ID:       71957
+ Station ID:       47186
+ Station ID:       47155
+ Station ID:        8221
+ Station ID:        7761
+ Station ID:       71957
+ Station ID:       71909
+ Station ID:       47155
+ Station ID:       16546
+ Station ID:        7761
+ Station ID:       71957
+ Station ID:       71909
+ Station ID:        8302
+ Station ID:       47155
+ Station ID:       60390
+ Station ID:       16546
+ Station ID:       71033
+ Station ID:       71907
+ Station ID:       71926
+ Station ID:       71119
+ Station ID:       72248
+ Station ID:       71909
+ Station ID:        8302
+ Station ID:       16546
+ Station ID:       60390
+ Station ID:       71033
+ Station ID:       71907
+ Station ID:       71926
+ Station ID:       71119
+ Station ID:       72248
+ Station ID:       71603
+ Station ID:       71823
+ Station ID:       71082
+ Station ID:       71908
+ Station ID:       71845
+ Station ID:        8302
+ Station ID:       10548
+ Station ID:       60390
+ Station ID:       71033
+ Station ID:       71907
+ Station ID:       71926
+ Station ID:       71119
+ Station ID:       71934
+ Station ID:       71816
+ Station ID:       60018
+ Station ID:       72248
+ Station ID:       71603
+ Station ID:       71823
+ Station ID:       71082
+ Station ID:       71908
+ Station ID:       71845
+ Station ID:       10548
+ Station ID:       71934
+ Station ID:       71816
+ Station ID:       71043
+ Station ID:       71722
+ Station ID:       60018
+ Station ID:       71603
+ Station ID:       71823
+ Station ID:       71082
+ Station ID:        2527
+ Station ID:       71908
+ Station ID:       71845
+ Station ID:       10548
+ Station ID:       71867
+ Station ID:       71836
+ Station ID:       71934
+ Station ID:       71816
+ Station ID:       71043
+ Station ID:       71722
+ Station ID:        2963
+ Station ID:       60018
+ Station ID:        2527
+ Station ID:       47600
+ Station ID:       71867
+ Station ID:       71836
+ Station ID:       71043
+ Station ID:       71722
+ Station ID:        2963
+ Station ID:        2527
+ Station ID:        7110
+ Station ID:       47600
+ Station ID:       71867
+ Station ID:       71836
+ Station ID:        2963
+ Station ID:       47418
+ Station ID:       47741
+ Station ID:       71917
+ Station ID:       94302
+ Station ID:       94312
+ Station ID:       94332
+ Station ID:       94975
+ Station ID:       94996
+ Station ID:       94998
+ Station ID:       94638
+ Station ID:       94653
+ Station ID:       94659
+ Station ID:       94672
+ Station ID:       94995
+ Station ID:        7110
+ Station ID:       88889
+ Station ID:       47600
+ Station ID:       70398
+ Station ID:       47418
+ Station ID:       47741
+ Station ID:       71917
+ Station ID:       94302
+ Station ID:       94312
+ Station ID:       94332
+ Station ID:       94975
+ Station ID:       94996
+ Station ID:       94998
+ Station ID:       94638
+ Station ID:       94653
+ Station ID:       94659
+ Station ID:       94672
+ Station ID:       94995
+ Station ID:       88889
+ Station ID:        7110
+ Station ID:       94120
+ Station ID:       94203
+ Station ID:       94299
+ Station ID:       94374
+ Station ID:       94403
+ Station ID:       94430
+ Station ID:       94461
+ Station ID:       94510
+ Station ID:       94578
+ Station ID:       94610
+ Station ID:       70398
+ Station ID:       47945
+ Station ID:       47418
+ Station ID:       47741
+ Station ID:       71917
+ Station ID:       94302
+ Station ID:       94312
+ Station ID:       94332
+ Station ID:       94975
+ Station ID:       94996
+ Station ID:       94998
+ Station ID:       94638
+ Station ID:       94653
+ Station ID:       94659
+ Station ID:       94672
+ Station ID:       94995
+ Station ID:       88889
+ Station ID:       94120
+ Station ID:       94203
+ Station ID:       94299
+ Station ID:       94374
+ Station ID:       94403
+ Station ID:       94430
+ Station ID:       94461
+ Station ID:       61980
+ Station ID:       94510
+ Station ID:       94578
+ Station ID:       94610
+ Station ID:       70398
+ Station ID:       47945
+ Station ID:       52681
+ Station ID:       53915
+ Station ID:       54374
+ Station ID:       54662
+ Station ID:       54857
+ Station ID:       57178
+ Station ID:       57461
+ Station ID:       57516
+ Station ID:       57749
+ Station ID:       57972
+ Station ID:       58150
+ Station ID:       58457
+ Station ID:       59758
+ Station ID:       59981
+ Station ID:       52866
+ Station ID:       50557
+ Station ID:       94120
+ Station ID:       94203
+ Station ID:       94299
+ Station ID:       94374
+ Station ID:       94403
+ Station ID:       94430
+ Station ID:       94461
+ Station ID:       50953
+ Station ID:       94510
+ Station ID:       94578
+ Station ID:       94610
+ Station ID:       53068
+ Station ID:       61980
+ Station ID:       53513
+ Station ID:       54102
+ Station ID:       54161
+ Station ID:       54292
+ Station ID:       56080
+ Station ID:       47945
+ Station ID:       56739
+ Station ID:       56964
+ Station ID:       57957
+ Station ID:       52681
+ Station ID:       57993
+ Station ID:       53915
+ Station ID:       58027
+ Station ID:       54374
+ Station ID:       58424
+ Station ID:       54662
+ Station ID:       58606
+ Station ID:       58633
+ Station ID:       54857
+ Station ID:       58665
+ Station ID:       57178
+ Station ID:       59211
+ Station ID:       57461
+ Station ID:       56029
+ Station ID:       50527
+ Station ID:       57516
+ Station ID:       50774
+ Station ID:       57749
+ Station ID:       52418
+ Station ID:       57972
+ Station ID:       52818
+ Station ID:       58150
+ Station ID:       52267
+ Station ID:       58457
+ Station ID:       52323
+ Station ID:       59758
+ Station ID:       52836
+ Station ID:       59981
+ Station ID:       54135
+ Station ID:       61980
+ Station ID:       47646
+ Station ID:       52866
+ Station ID:       47778
+ Station ID:       47807
+ Station ID:       47827
+ Station ID:       50557
+ Station ID:       47909
+ Station ID:       47918
+ Station ID:       47971
+ Station ID:       47401
+ Station ID:       47412
+ Station ID:       50953
+ Station ID:       47582
+ Station ID:       47600
+ Station ID:       53068
+ Station ID:       55299
+ Station ID:       55591
+ Station ID:       53513
+ Station ID:       56137
+ Station ID:       56691
+ Station ID:       54102
+ Station ID:       56985
+ Station ID:       54161
+ Station ID:       52681
+ Station ID:       57447
+ Station ID:       54292
+ Station ID:       53915
+ Station ID:       56080
+ Station ID:       58203
+ Station ID:       54374
+ Station ID:       59265
+ Station ID:       56739
+ Station ID:       54662
+ Station ID:       52533
+ Station ID:       56964
+ Station ID:       52983
+ Station ID:       54857
+ Station ID:       57957
+ Station ID:       53463
+ Station ID:       57178
+ Station ID:       53845
+ Station ID:       57993
+ Station ID:       57461
+ Station ID:       54218
+ Station ID:       58027
+ Station ID:       54727
+ Station ID:       57516
+ Station ID:       58424
+ Station ID:       57083
+ Station ID:       57749
+ Station ID:       58606
+ Station ID:       57127
+ Station ID:       57972
+ Station ID:       58633
+ Station ID:       57131
+ Station ID:       58150
+ Station ID:       58665
+ Station ID:       56778
+ Station ID:       58457
+ Station ID:       59211
+ Station ID:       57494
+ Station ID:       59758
+ Station ID:       56029
+ Station ID:       59981
+ Station ID:       57687
+ Station ID:       50527
+ Station ID:       52866
+ Station ID:       57816
+ Station ID:       50557
+ Station ID:       50774
+ Station ID:       58238
+ Station ID:       50953
+ Station ID:       52418
+ Station ID:       58362
+ Station ID:       53068
+ Station ID:       59280
+ Station ID:       52818
+ Station ID:       59431
+ Station ID:       53513
+ Station ID:       52267
+ Station ID:       53772
+ Station ID:       54102
+ Station ID:       58725
+ Station ID:       52323
+ Station ID:       54161
+ Station ID:       59134
+ Station ID:       52836
+ Station ID:       54292
+ Station ID:       58847
+ Station ID:       56080
+ Station ID:       54135
+ Station ID:       54511
+ Station ID:       47646
+ Station ID:       56739
+ Station ID:       47778
+ Station ID:       47807
+ Station ID:       47945
+ Station ID:       47827
+ Station ID:       56964
+ Station ID:       47678
+ Station ID:       47909
+ Station ID:       47918
+ Station ID:       59316
+ Station ID:       47971
+ Station ID:       57957
+ Station ID:       47401
+ Station ID:       47412
+ Station ID:       47582
+ Station ID:       51076
+ Station ID:       57993
+ Station ID:       47600
+ Station ID:       58027
+ Station ID:       55299
+ Station ID:       51431
+ Station ID:       55591
+ Station ID:       58424
+ Station ID:       56146
+ Station ID:       56137
+ Station ID:       58606
+ Station ID:       56571
+ Station ID:       56691
+ Station ID:       58633
+ Station ID:       51709
+ Station ID:       56985
+ Station ID:       51777
+ Station ID:       58665
+ Station ID:       57447
+ Station ID:       59211
+ Station ID:       51644
+ Station ID:       56029
+ Station ID:       51828
+ Station ID:       58203
+ Station ID:       50527
+ Station ID:       53614
+ Station ID:       59265
+ Station ID:       51839
+ Station ID:       50774
+ Station ID:       52533
+ Station ID:       52203
+ Station ID:       52983
+ Station ID:       52418
+ Station ID:       51463
+ Station ID:       52818
+ Station ID:       53463
+ Station ID:       56187
+ Station ID:       52267
+ Station ID:       53845
+ Station ID:       54218
+ Station ID:       52323
+ Station ID:       54727
+ Station ID:       52836
+ Station ID:       57083
+ Station ID:       54135
+ Station ID:       47646
+ Station ID:       47778
+ Station ID:       57127
+ Station ID:       47807
+ Station ID:       47827
+ Station ID:       47909
+ Station ID:       47918
+ Station ID:       47971
+ Station ID:       57131
+ Station ID:       47401
+ Station ID:       47412
+ Station ID:       47582
+ Station ID:       47600
+ Station ID:       56778
+ Station ID:       55299
+ Station ID:       55591
+ Station ID:       72249
+ Station ID:       57494
+ Station ID:       56137
+ Station ID:       56691
+ Station ID:       57687
+ Station ID:       56985
+ Station ID:       57816
+ Station ID:       57447
+ Station ID:       58238
+ Station ID:       58203
+ Station ID:       58362
+ Station ID:       59280
+ Station ID:       59265
+ Station ID:       52533
+ Station ID:       59431
+ Station ID:       52983
+ Station ID:       53772
+ Station ID:       53463
+ Station ID:       58725
+ Station ID:       53845
+ Station ID:       59134
+ Station ID:       54218
+ Station ID:       58847
+ Station ID:       54727
+ Station ID:       57083
+ Station ID:       54511
+ Station ID:       47945
+ Station ID:       57127
+ Station ID:       47678
+ Station ID:       57131
+ Station ID:       59316
+ Station ID:       56778
+ Station ID:       51076
+ Station ID:       51431
+ Station ID:       57494
+ Station ID:       56146
+ Station ID:       57687
+ Station ID:       56571
+ Station ID:       57816
+ Station ID:       94776
+ Station ID:       70326
+ Station ID:       58238
+ Station ID:       51709
+ Station ID:       70361
+ Station ID:       70273
+ Station ID:       58362
+ Station ID:       70398
+ Station ID:       51777
+ Station ID:       59280
+ Station ID:       59431
+ Station ID:       51644
+ Station ID:       53772
+ Station ID:       51828
+ Station ID:       58725
+ Station ID:       53614
+ Station ID:       59134
+ Station ID:       51839
+ Station ID:       58847
+ Station ID:       52203
+ Station ID:       54511
+ Station ID:       51463
+ Station ID:       47945
+ Station ID:       47678
+ Station ID:       56187
+ Station ID:       59316
+ Station ID:       47991
+ Station ID:       51076
+ Station ID:       51431
+ Station ID:       56146
+ Station ID:       56571
+ Station ID:       51709
+ Station ID:       51777
+ Station ID:       51644
+ Station ID:       51828
+ Station ID:       72249
+ Station ID:       53614
+ Station ID:       51839
+ Station ID:       52203
+ Station ID:       51463
+ Station ID:       56187
+ Station ID:       47991
+ Station ID:       93417
+ Station ID:       72249
+ Station ID:       93112
+ Station ID:       94776
+ Station ID:       93844
+ Station ID:       70326
+ Station ID:       70361
+ Station ID:       70273
+ Station ID:       70398
+ Station ID:        1010
+ Station ID:       47991
+ Station ID:       10868
+ Station ID:       94776
+ Station ID:       70326
+ Station ID:       70361
+ Station ID:       70273
+ Station ID:       70398
+ Station ID:        1415
+ Station ID:       10113
+ Station ID:       47991
+ Station ID:       10739
+ Station ID:       47991
+ Station ID:       10184
+ Station ID:       93417
+ Station ID:       93112
+ Station ID:       11520
+ Station ID:       47991
+ Station ID:       93844
+ Station ID:       10238
+ Station ID:       93417
+ Station ID:        1010
+ Station ID:       93112
+ Station ID:        8383
+ Station ID:       10868
+ Station ID:       93844
+ Station ID:        1415
+ Station ID:        1010
+ Station ID:       10113
+ Station ID:        2836
+ Station ID:       10868
+ Station ID:       10739
+ Station ID:       10035
+ Station ID:        1415
+ Station ID:       10184
+ Station ID:       10618
+ Station ID:       10113
+ Station ID:       10771
+ Station ID:       11520
+ Station ID:       10739
+ Station ID:       11952
+ Station ID:       10184
+ Station ID:       10238
+ Station ID:       11520
+ Station ID:       10393
+ Station ID:        8383
+ Station ID:       10238
+ Station ID:        8383
+ Station ID:        2836
+ Station ID:       16064
+ Station ID:       10035
+ Station ID:       10618
+ Station ID:        2836
+ Station ID:       10771
+ Station ID:        8302
+ Station ID:       10035
+ Station ID:       11952
+ Station ID:       10548
+ Station ID:       10618
+ Station ID:        1028
+ Station ID:       10771
+ Station ID:       10393
+ Station ID:       11952
+ Station ID:        2527
+ Station ID:       10393
+ Station ID:       16064
+ Station ID:       16332
+ Station ID:       16064
+ Station ID:        8302
+ Station ID:        8001
+ Station ID:       10548
+ Station ID:        1028
+ Station ID:        8302
+ Station ID:        2527
+ Station ID:       10548
+ Station ID:        1028
+ Station ID:        2527
+ Station ID:       16332
+ Station ID:       10410
+ Station ID:       17600
+ Station ID:       17609
+ Station ID:       41506
+ Station ID:       41515
+ Station ID:       41560
+ Station ID:       41571
+ Station ID:       41598
+ Station ID:       41620
+ Station ID:       41624
+ Station ID:       41640
+ Station ID:       41685
+ Station ID:       41710
+ Station ID:       41712
+ Station ID:       41715
+ Station ID:       41718
+ Station ID:       41739
+ Station ID:       41744
+ Station ID:       41749
+ Station ID:       16332
+ Station ID:       41768
+ Station ID:       41529
+ Station ID:       41594
+ Station ID:       41660
+ Station ID:       41675
+ Station ID:       41756
+ Station ID:       41780
+ Station ID:       48378
+ Station ID:       48431
+ Station ID:       48477
+ Station ID:       48500
+ Station ID:        8001
+ Station ID:        8001
+ Station ID:       10410
+ Station ID:       17600
+ Station ID:       17609
+ Station ID:       41506
+ Station ID:       41515
+ Station ID:       41560
+ Station ID:       41571
+ Station ID:       41598
+ Station ID:       41620
+ Station ID:       41624
+ Station ID:       41640
+ Station ID:       41685
+ Station ID:       41710
+ Station ID:       41712
+ Station ID:       41715
+ Station ID:       41718
+ Station ID:       41739
+ Station ID:       41744
+ Station ID:       41749
+ Station ID:       41768
+ Station ID:       41529
+ Station ID:       41594
+ Station ID:       41660
+ Station ID:       41675
+ Station ID:       41756
+ Station ID:       41780
+ Station ID:       48378
+ Station ID:       48431
+ Station ID:       48477
+ Station ID:       48500
+ Station ID:       10410
+ Station ID:       17600
+ Station ID:       17609
+ Station ID:       41506
+ Station ID:       41515
+ Station ID:       41560
+ Station ID:       41571
+ Station ID:       41598
+ Station ID:       41620
+ Station ID:       41624
+ Station ID:       41640
+ Station ID:       41685
+ Station ID:       41710
+ Station ID:       41712
+ Station ID:       41715
+ Station ID:       41718
+ Station ID:       41739
+ Station ID:       41744
+ Station ID:       41749
+ Station ID:       41768
+ Station ID:       41529
+ Station ID:       41594
+ Station ID:       41660
+ Station ID:       41675
+ Station ID:       41756
+ Station ID:       41780
+ Station ID:       48378
+ Station ID:       48431
+ Station ID:       48477
+ Station ID:       48500
+  number of high resolution uv stations          299
+
+  number of high resolution t stations          287
+ Station ID:       48500
+
+  number of high resolution q stations          283
+
+  dval_use =  F
+ number of HD stations         287         283         299         249
+ processors                      1           2           3           0
+ usenewgfsberror = .false. old format file 
+ m_berror_stats::read_bal(PREBAL):  get balance variables"berror_stats".  
+ mype,nsigstat,nlatstat =           0         127         770
+ m_berror_stats::read_wgt(PREWGT):  read error amplitudes "berror_stats".  
+ mype,nsigstat,nlatstat =           0         127         770
+GLBSOI: jiter,jiterstart,jiterlast,jiterend=    1    1    2    1
+ GENSTATS_GPS:  no profiles to process (nprof_gfs=           0 ), EXIT routine
+ Begin J table inner/outer loop           0           1
+     J term                                     J  
+surface pressure             8.4519331906236374E+01
+temperature                  3.7331719590356894E+04
+wind                         9.9516400990831957E+04
+moisture                     1.1667320650032665E+04
+ ----------------------------------------------------- 
+ J Global                    1.4859996056312774E+05
+ End Jo table inner/outer loop           0           1
+Initial cost function =  1.485999605631277373E+05
+Initial gradient norm =  8.413980230392172643E+02
+cost,grad,step,b,step? =   1   0  1.485999605631277373E+05  8.413980230392172643E+02  5.019843158026029073E+01  0.000000000000000000E+00  good 
+cost,grad,step,b,step? =   1   1  1.130619491415263910E+05  6.341112827122193494E+02  2.199779123926894897E+01  5.679733868730675317E-01  good 
+cost,grad,step,b,step? =   1   2  1.042167006628681411E+05  6.341568431220952107E+02  2.574605872461717482E+01  1.000143703630096859E+00  good 
+cost,grad,step,b,step? =   1   3  9.386279694785886386E+04  4.526813622578873151E+02  3.343680938435435479E+01  5.095559320060122355E-01  good 
+cost,grad,step,b,step? =   1   4  8.701091206794224854E+04  3.445324098229132233E+02  3.674500779695817698E+01  5.792618612071636086E-01  good 
+cost,grad,step,b,step? =   1   5  8.264918478820439486E+04  3.070947110491396188E+02  3.045282468020898037E+01  7.944828193918163084E-01  good 
+cost,grad,step,b,step? =   1   6  7.977726533130148891E+04  2.456850157535883170E+02  3.074114253849679201E+01  6.400481784307824329E-01  good 
+cost,grad,step,b,step? =   1   7  7.792169532346047345E+04  2.077177896884826680E+02  2.588276452800777960E+01  7.148090554619127568E-01  good 
+cost,grad,step,b,step? =   1   8  7.680493996089341817E+04  1.721514541480280513E+02  2.905185542289615341E+01  6.868691417309839009E-01  good 
+cost,grad,step,b,step? =   1   9  7.594395559540057729E+04  1.371484715039542834E+02  3.138218152836055452E+01  6.346883879165190478E-01  good 
+cost,grad,step,b,step? =   1  10  7.535366607395780738E+04  1.074453006871770100E+02  3.263307594953582935E+01  6.137519818887758882E-01  good 
+ update_guess: successfully complete
+================================================================================
+Status   Var          Mean                 Min                    Max
+analysis U      6.497917319078E+00  -9.931923377669E+01   2.039333937152E+02
+analysis V     -2.428786898311E-01  -7.871873949859E+01   8.349422302404E+01
+analysis TV     2.456679676930E+02   1.573061890473E+02   3.166441114547E+02
+analysis Q      1.954004513281E-03   1.000000000000E-07   2.300826356162E-02
+analysis TSEN   2.453286584539E+02   1.573057860976E+02   3.159318498581E+02
+analysis OZ     2.013251133752E-06   1.000000000000E-15   1.799240299357E-05
+analysis CW     6.208793489438E-06   0.000000000000E+00   1.878831120862E-03
+analysis CF     0.000000000000E+00   0.000000000000E+00   0.000000000000E+00
+analysis DIV    1.647983961262E-08  -2.111108258078E-03   2.980285969721E-03
+analysis VOR   -2.588345795776E-06  -1.777042613795E-03   2.033262769456E-03
+analysis PRSL   3.993592622497E+01   1.293517349355E-03   1.044039040310E+02
+analysis PS     9.665325585135E+01   4.860131148611E+01   1.045320308269E+02
+analysis SST    0.000000000000E+00   0.000000000000E+00   0.000000000000E+00
+analysis radb   6.576275075075E-02  -1.251836560000E+02   2.609153460000E+02
+analysis pcpb   0.000000000000E+00   0.000000000000E+00   0.000000000000E+00
+analysis aftb   0.000000000000E+00   0.000000000000E+00   0.000000000000E+00
+================================================================================
+increment u                                  4.381336228628E-04  -1.592133080808E+01   1.375356064210E+01
+increment v                                 -3.612113050227E-04  -1.081826141412E+01   9.293790143753E+00
+increment tv                                 7.728140027081E-03  -3.654847420548E+00   3.874226566738E+00
+increment tsen                               7.608769130809E-03  -3.590874060862E+00   3.906112516330E+00
+increment q                                  4.291270105287E-07  -4.552268746378E-03   3.899209024891E-03
+increment oz                                 0.000000000000E+00   0.000000000000E+00   0.000000000000E+00
+increment ql                                 0.000000000000E+00   0.000000000000E+00   0.000000000000E+00
+increment qi                                 0.000000000000E+00   0.000000000000E+00   0.000000000000E+00
+increment prse                              -2.923976636041E-04  -7.586568292883E-02   8.899362586378E-02
+increment ps                                -8.322128511859E-04  -7.586568292883E-02   8.899362586378E-02
+increment sst                                0.000000000000E+00   0.000000000000E+00   0.000000000000E+00
+GLBSOI: jiter,jiterstart,jiterlast,jiterend=    2    1    2    1
+ GENSTATS_GPS:  no profiles to process (nprof_gfs=           0 ), EXIT routine
+ Begin J table inner/outer loop           0           2
+     J term                                     J  
+background                   1.7731831080044449E+04
+surface pressure             7.4465928892179718E+01
+temperature                  1.5805014176222325E+04
+wind                         3.7706877604085421E+04
+moisture                     3.7983042639421510E+03
+ ----------------------------------------------------- 
+ J Global                    7.5116493053186525E+04
+ End Jo table inner/outer loop           0           2
+Initial cost function =  7.511649305318652478E+04
+Initial gradient norm =  9.369314169538917270E+01
+cost,grad,step,b,step? =   2   0  7.511649305318652478E+04  9.369314169538917270E+01  1.994785335018165995E+01  0.000000000000000000E+00  good 
+cost,grad,step,b,step? =   2   1  7.494138272157260508E+04  6.813212310218631274E+01  3.862041236003535261E+01  5.287960972148945116E-01  good 
+cost,grad,step,b,step? =   2   2  7.476210730042032083E+04  6.097219932318232338E+01  3.478390254702676287E+01  8.008660369518135758E-01  good 
+cost,grad,step,b,step? =   2   3  7.463279434811515966E+04  5.499395072060850964E+01  3.089463685326939313E+01  8.135160374303570530E-01  good 
+cost,grad,step,b,step? =   2   4  7.453935862843538052E+04  5.305252814388553873E+01  2.840040015387214112E+01  9.306413145216516636E-01  good 
+cost,grad,step,b,step? =   2   5  7.445942369308820344E+04  4.533633999142050897E+01  3.360416475316035445E+01  7.302654336635634458E-01  good 
+cost,grad,step,b,step? =   2   6  7.439035423980207997E+04  3.851278079684172440E+01  3.390979896942484118E+01  7.216337599240491008E-01  good 
+cost,grad,step,b,step? =   2   7  7.434005806338315597E+04  3.160487363143424133E+01  3.234656462530814736E+01  6.734391508870923859E-01  good 
+cost,grad,step,b,step? =   2   8  7.430774811386379588E+04  2.557044668141496047E+01  3.636652629572709117E+01  6.545887135214664143E-01  good 
+cost,grad,step,b,step? =   2   9  7.428396994270686992E+04  2.028172357014481975E+01  2.733854187345725251E+01  6.291194166734648263E-01  good 
+cost,grad,step,b,step? =   2  10  7.427272427968267584E+04  2.151567901599052846E+01  2.260285914090441040E+01  1.125383114910380344E+00  good 
+ update_guess: successfully complete
+================================================================================
+Status   Var          Mean                 Min                    Max
+analysis U      6.497912965766E+00  -9.931988774939E+01   2.039335774597E+02
+analysis V     -2.428748900581E-01  -7.871892904089E+01   8.349422305896E+01
+analysis TV     2.456681122728E+02   1.573059228378E+02   3.166440419060E+02
+analysis Q      1.954196353782E-03   1.000000000000E-07   2.300819349780E-02
+analysis TSEN   2.453287713574E+02   1.573055198887E+02   3.159841076584E+02
+analysis OZ     2.013251133752E-06   1.000000000000E-15   1.799240299357E-05
+analysis CW     6.208793489438E-06   0.000000000000E+00   1.878831120862E-03
+analysis CF     0.000000000000E+00   0.000000000000E+00   0.000000000000E+00
+analysis DIV    1.649619483009E-08  -2.111108260847E-03   2.980281043058E-03
+analysis VOR   -2.588391527911E-06  -1.777042450653E-03   2.033265620805E-03
+analysis PRSL   3.993563480946E+01   1.293517349355E-03   1.044028204175E+02
+analysis PS     9.665331369439E+01   4.860107804985E+01   1.045320508653E+02
+analysis SST    0.000000000000E+00   0.000000000000E+00   0.000000000000E+00
+analysis radb   6.576275075075E-02  -1.251836560000E+02   2.609153460000E+02
+analysis pcpb   0.000000000000E+00   0.000000000000E+00   0.000000000000E+00
+analysis aftb   0.000000000000E+00   0.000000000000E+00   0.000000000000E+00
+================================================================================
+increment u                                 -4.353312756527E-06  -1.315836905058E+00   1.129382554761E+00
+increment v                                  3.799773068008E-06  -3.219346371405E+00   6.930208638601E-01
+increment tv                                 1.445797833962E-04  -3.853634661333E-01   4.065007622917E-01
+increment tsen                               1.129463206074E-04  -3.720932774084E-01   3.738565197263E-01
+increment q                                  1.916436912694E-07  -1.020932097623E-03   6.549840746524E-04
+increment oz                                 0.000000000000E+00   0.000000000000E+00   0.000000000000E+00
+increment ql                                 0.000000000000E+00   0.000000000000E+00   0.000000000000E+00
+increment qi                                 0.000000000000E+00   0.000000000000E+00   0.000000000000E+00
+increment prse                               2.032313313927E-05  -5.961285940370E-03   1.266686811982E-02
+increment ps                                 5.784304965501E-05  -5.961285940370E-03   1.266686811982E-02
+increment sst                                0.000000000000E+00   0.000000000000E+00   0.000000000000E+00
+WRITE_GFS: writing analysis increment for FHR 06
+ FV3 netCDF increment written, file= siginc.nc
+ *** SUCCESS writing dtf & msk file dtfanl!
+ GENSTATS_GPS:  no profiles to process (nprof_gfs=           0 ), EXIT routine
+ gsi_chemguess_mod*destroy_: dealloc() for chem-tracer done
+ gsi_metguess_mod*destroy_: dealloc() for met-guess done
+ glbsoi: complete
+[000]gsisub(): : complete.
+
+
+     ENDING DATE-TIME    FEB 20,2022  19:47:44.764   51  SUN   2459631
+     PROGRAM GSI_ANL HAS ENDED.
+* . * . * . * . * . * . * . * . * . * . * . * . * . * . * . * . * . * . * . * . 
+*****************RESOURCE STATISTICS*******************************
+The total amount of wall time                        = 800.210589
+The total amount of time in user mode                = 773.908126
+The total amount of time in sys mode                 = 18.428854
+The maximum resident set size (KB)                   = 4678576
+Number of page faults without I/O activity           = 409855
+Number of page faults with I/O activity              = 10
+Number of times filesystem performed INPUT           = 575224
+Number of times filesystem performed OUTPUT          = 11595720
+Number of Voluntary Context Switches                 = 76060
+Number of InVoluntary Context Switches               = 2369
+*****************END OF RESOURCE STATISTICS*************************
+
