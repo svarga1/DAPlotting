@@ -1,0 +1,22 @@
+Finished Difference Plots
+Finished Histograms
+T Statistics:
+                  0
+count  1.498153e+08
+mean  -2.537281e-03
+std    3.161357e-02
+min   -2.425703e+00
+25%   -8.496642e-04
+50%   -2.199411e-05
+75%    6.204396e-04
+max    2.115180e+00
+U Statistics:
+                  0
+count  1.498153e+08
+mean  -8.834979e-03
+std    1.052154e-01
+min   -6.521480e+00
+25%   -5.263946e-03
+50%   -7.617474e-05
+75%    3.726751e-03
+max    3.842418e+00
